@@ -12,30 +12,30 @@ export default function Home() {
       <head>
         <link rel="icon" href="/favicon.ico" />
       </head>
-     <main className="bg-background min-h-screen">
-  <section id="hero" className="min-h-screen">
-    <Hero />
-  </section>
-  <section id="about" className="min-h-screen">
-    <About />
-  </section>
-  <section id="experience" className="min-h-screen">
-    <Experience />
-  </section>
-  <section id="skills" className="min-h-screen">
-    <Skills />
-  </section>
-  <section id="projects" className="min-h-screen">
-    <Projects />
-  </section>
-  <section id="certifications" className="min-h-screen">
-    <Certifications />
-  </section>
-  <section id="contact" className="min-h-screen">
-    <Contact />
-  </section>
-  <FloatingNav />
-</main>
+      <main className="bg-background">
+        <section id="hero" className="min-h-screen">
+          <Hero />
+        </section>
+        <section id="about">
+          <About />
+        </section>
+        <section id="experience">
+          <Experience />
+        </section>
+        <section id="skills">
+          <Skills />
+        </section>
+        <section id="projects">
+          <Projects />
+        </section>
+        <section id="certifications">
+          <Certifications />
+        </section>
+        <section id="contact">
+          <Contact />
+        </section>
+        <section> <br /><FloatingNav /> </section>
+      </main>
     </>
   )
 }
