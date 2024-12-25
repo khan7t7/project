@@ -22,18 +22,20 @@ const skillCategories = [
     skills: [
       { name: "Python", level: 95, color: "from-[hsl(var(--gradient-1))] to-[hsl(var(--gradient-2))]" },
       { name: "JavaScript", level: 92, color: "from-[hsl(var(--gradient-2))] to-[hsl(var(--gradient-3))]" },
-      { name: "C++", level: 85, color: "from-[hsl(var(--gradient-3))] to-[hsl(var(--gradient-1))]" },
-      { name: "HTML5", level: 90, color: "from-[hsl(var(--gradient-1))] to-[hsl(var(--gradient-2))]" },
-      { name: "CSS3", level: 88, color: "from-[hsl(var(--gradient-2))] to-[hsl(var(--gradient-3))]" }
+      { name: "Java", level: 90, color: "from-[hsl(var(--gradient-3))] to-[hsl(var(--gradient-1))]" },
+      { name: "C++", level: 85, color: "from-[hsl(var(--gradient-1))] to-[hsl(var(--gradient-2))]" },
+      { name: "HTML5", level: 90, color: "from-[hsl(var(--gradient-2))] to-[hsl(var(--gradient-3))]" },
+      { name: "CSS3", level: 88, color: "from-[hsl(var(--gradient-3))] to-[hsl(var(--gradient-1))]" }
     ]
   },
   {
     name: "Enterprise Solutions",
     skills: [
-      { name: "ERPNext Development", level: 94, color: "from-[hsl(var(--gradient-1))] to-[hsl(var(--gradient-2))]" },
-      { name: "Frappe Framework", level: 92, color: "from-[hsl(var(--gradient-2))] to-[hsl(var(--gradient-3))]" },
-      { name: "Orion ERP", level: 88, color: "from-[hsl(var(--gradient-3))] to-[hsl(var(--gradient-1))]" },
-      { name: "Enterprise Resource Planning", level: 90, color: "from-[hsl(var(--gradient-1))] to-[hsl(var(--gradient-2))]" }
+      { name: "Spring Boot", level: 92, color: "from-[hsl(var(--gradient-1))] to-[hsl(var(--gradient-2))]" },
+      { name: "ERPNext Development", level: 94, color: "from-[hsl(var(--gradient-2))] to-[hsl(var(--gradient-3))]" },
+      { name: "Frappe Framework", level: 92, color: "from-[hsl(var(--gradient-3))] to-[hsl(var(--gradient-1))]" },
+      { name: "Orion ERP", level: 88, color: "from-[hsl(var(--gradient-1))] to-[hsl(var(--gradient-2))]" },
+      { name: "Enterprise Resource Planning", level: 90, color: "from-[hsl(var(--gradient-2))] to-[hsl(var(--gradient-3))]" }
     ]
   },
   {
@@ -41,10 +43,11 @@ const skillCategories = [
     skills: [
       { name: "RESTful APIs", level: 91, color: "from-[hsl(var(--gradient-1))] to-[hsl(var(--gradient-2))]" },
       { name: "FAST APIs", level: 88, color: "from-[hsl(var(--gradient-2))] to-[hsl(var(--gradient-3))]" },
-      { name: "WordPress", level: 86, color: "from-[hsl(var(--gradient-3))] to-[hsl(var(--gradient-1))]" },
-      { name: "CodeIgniter", level: 85, color: "from-[hsl(var(--gradient-1))] to-[hsl(var(--gradient-2))]" },
-      { name: "Bootstrap", level: 89, color: "from-[hsl(var(--gradient-2))] to-[hsl(var(--gradient-3))]" },
-      { name: "jQuery", level: 87, color: "from-[hsl(var(--gradient-3))] to-[hsl(var(--gradient-1))]" }
+      { name: "Apache Tomcat", level: 89, color: "from-[hsl(var(--gradient-3))] to-[hsl(var(--gradient-1))]" },
+      { name: "WordPress", level: 86, color: "from-[hsl(var(--gradient-1))] to-[hsl(var(--gradient-2))]" },
+      { name: "CodeIgniter", level: 85, color: "from-[hsl(var(--gradient-2))] to-[hsl(var(--gradient-3))]" },
+      { name: "Bootstrap", level: 89, color: "from-[hsl(var(--gradient-3))] to-[hsl(var(--gradient-1))]" },
+      { name: "jQuery", level: 87, color: "from-[hsl(var(--gradient-1))] to-[hsl(var(--gradient-2))]" }
     ]
   },
   {
@@ -61,11 +64,13 @@ const skillCategories = [
   {
     name: "DevOps & Tools",
     skills: [
-      { name: "Git", level: 93, color: "from-[hsl(var(--gradient-1))] to-[hsl(var(--gradient-2))]" },
-      { name: "GitHub", level: 92, color: "from-[hsl(var(--gradient-2))] to-[hsl(var(--gradient-3))]" },
-      { name: "GitHub Actions", level: 88, color: "from-[hsl(var(--gradient-3))] to-[hsl(var(--gradient-1))]" },
-      { name: "Postman API", level: 90, color: "from-[hsl(var(--gradient-1))] to-[hsl(var(--gradient-2))]" },
-      { name: "Network Security", level: 86, color: "from-[hsl(var(--gradient-2))] to-[hsl(var(--gradient-3))]" }
+      { name: "Docker", level: 91, color: "from-[hsl(var(--gradient-1))] to-[hsl(var(--gradient-2))]" },
+      { name: "Apache Kafka", level: 89, color: "from-[hsl(var(--gradient-2))] to-[hsl(var(--gradient-3))]" },
+      { name: "Git", level: 93, color: "from-[hsl(var(--gradient-3))] to-[hsl(var(--gradient-1))]" },
+      { name: "GitHub", level: 92, color: "from-[hsl(var(--gradient-1))] to-[hsl(var(--gradient-2))]" },
+      { name: "GitHub Actions", level: 88, color: "from-[hsl(var(--gradient-2))] to-[hsl(var(--gradient-3))]" },
+      { name: "Postman API", level: 90, color: "from-[hsl(var(--gradient-3))] to-[hsl(var(--gradient-1))]" },
+      { name: "Network Security", level: 86, color: "from-[hsl(var(--gradient-1))] to-[hsl(var(--gradient-2))]" }
     ]
   },
   {
