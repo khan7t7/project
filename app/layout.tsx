@@ -26,8 +26,11 @@ export default function RootLayout({
           disableTransitionOnChange
           storageKey="theme-preference"
         >
-          <main className="bg-background min-h-screen">
+          <main className="bg-background min-h-screen pt-20">
             {children}
+            <footer className="text-center py-4 text-sm text-muted-foreground mt-auto">
+              Made by Mustafa | with <span className="text-red-500">🩵</span>
+            </footer>
           </main>
         </ThemeProvider>
       </body>
