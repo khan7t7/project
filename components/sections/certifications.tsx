@@ -1,7 +1,7 @@
 "use client"
 
-import { MotionSection } from "@/components/ui/motion-section"
 import { Card } from "@/components/ui/card"
+import { MotionSection } from "@/components/ui/motion-section"
 import { motion } from "framer-motion"
 import { Award } from "lucide-react"
 
