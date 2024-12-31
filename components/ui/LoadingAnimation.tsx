@@ -10,6 +10,7 @@ export function LoadingAnimation({ onComplete }: { onComplete: () => void }) {
 
   useEffect(() => {
     if (!canvasRef.current) return
+    const currentRef = canvasRef.current
 
     const scene = new THREE.Scene()
     const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000)
@@ -20,7 +21,7 @@ export function LoadingAnimation({ onComplete }: { onComplete: () => void }) {
 
     renderer.setSize(window.innerWidth, window.innerHeight)
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
-    canvasRef.current.appendChild(renderer.domElement)
+    currentRef.appendChild(renderer.domElement)
 
     // Create loading ring
     const geometry = new THREE.TorusGeometry(0.7, 0.1, 16, 100)
@@ -72,7 +73,7 @@ export function LoadingAnimation({ onComplete }: { onComplete: () => void }) {
 
     return () => {
       window.removeEventListener('resize', handleResize)
-      canvasRef.current?.removeChild(renderer.domElement)
+      currentRef?.removeChild(renderer.domElement)
     }
   }, [])
 
