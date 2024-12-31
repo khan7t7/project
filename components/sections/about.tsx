@@ -3,6 +3,7 @@
 import { Card, CardContent } from "@/components/ui/card"
 import { MotionSection } from "@/components/ui/motion-section"
 import { BrainIcon, BuildingIcon, CodeIcon, TargetIcon } from "lucide-react"
+
 export function About() {
   return (
     <MotionSection className="py-20 px-4" delay={0.3}>

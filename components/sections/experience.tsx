@@ -1,7 +1,7 @@
 "use client"
 
-import { MotionSection } from "@/components/ui/motion-section"
 import { Card } from "@/components/ui/card"
+import { MotionSection } from "@/components/ui/motion-section"
 import { motion } from "framer-motion"
 import { BriefcaseIcon } from "lucide-react"
 
@@ -49,7 +49,7 @@ export function Experience() {
         <div className="relative">
           {/* Timeline line */}
           <div className="absolute left-0 md:left-1/2 transform -translate-x-px h-full w-0.5 bg-border" />
-          
+
           {/* Experience items */}
           {experiences.map((exp, index) => (
             <motion.div
@@ -68,8 +68,8 @@ export function Experience() {
               } left-0 -translate-x-1/2 top-0 w-8 h-8 bg-background border-2 border-primary rounded-full flex items-center justify-center`}>
                 <BriefcaseIcon className="w-4 h-4 text-primary" />
               </div>
-              
-              <Card className="p-6 hover:shadow-lg transition-shadow">
+
+              <Card className="p-6 hover:shadow-lg transition-shadow backdrop-blur-sm">
                 <h3 className="font-bold text-xl mb-2">{exp.title}</h3>
                 <p className="text-muted-foreground mb-2">{exp.company} • {exp.location}</p>
                 <p className="text-sm text-muted-foreground mb-4">{exp.period}</p>

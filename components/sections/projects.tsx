@@ -58,7 +58,7 @@ export function Projects() {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.2 }}
               >
-                <Card className="p-6 hover:shadow-lg transition-shadow bg-background/90 backdrop-blur-sm">
+                <Card className="p-6 hover:shadow-lg transition-shadow bg-background/90">
                   <div className="flex items-start gap-4">
                     <div className="bg-primary/10 p-3 rounded-lg">
                       <Icon className="w-6 h-6 text-primary" />

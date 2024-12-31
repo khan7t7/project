@@ -69,7 +69,7 @@ export function Hero() {
         style={{ top: '40%', right: '30%' }}
       />
 
-      <div className="relative">
+      <div className="relative z-10 w-full max-w-4xl px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -99,26 +99,30 @@ export function Hero() {
         </motion.div>
 
         <div className="sticky top-4">
-          <motion.h1
+          <motion.div
             style={{
               scale: nameScale,
               x: nameX,
               opacity: nameOpacity
             }}
-            className="text-4xl md:text-6xl font-bold mb-4 gradient-text bubble-text"
+            className="mb-4"
           >
-            Mustafa Ahmad
-          </motion.h1>
+            <h1 className="text-4xl md:text-6xl font-bold gradient-text bubble-text">
+              Mustafa Ahmad
+            </h1>
+          </motion.div>
 
-          <motion.p
+          <motion.div
             style={{
               x: taglineX,
               opacity: taglineOpacity
             }}
-            className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl bubble-text"
+            className="mb-8"
           >
-            Full-Stack Developer | ERPNext Expert | System Administrator | Gen AI Enthusiast
-          </motion.p>
+            <p className="text-xl md:text-2xl text-muted-foreground bubble-text">
+              Full-Stack Developer | ERPNext Expert | System Administrator | Gen AI Enthusiast
+            </p>
+          </motion.div>
         </div>
 
         <motion.div
