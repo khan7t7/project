@@ -1,6 +1,7 @@
 "use client"
 
 import { ThemeProvider } from '@/components/theme-provider'
+import { CursorTrail } from "@/components/ui/CursorTrail"
 import { LoadingAnimation } from "@/components/ui/LoadingAnimation"
 import { StickyHeader } from "@/components/ui/sticky-header"
 import { ThreeScene } from "@/components/ui/ThreeScene"
@@ -19,8 +20,9 @@ export function ClientLayout({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     Promise.all([
       document.fonts.ready,
+      new Promise(resolve => setTimeout(resolve, 2000))
     ]).then(() => {
-      setTimeout(() => setIsLoading(false), 2000)
+      setIsLoading(false)
     })
   }, [])
 
@@ -32,6 +34,7 @@ export function ClientLayout({ children }: { children: React.ReactNode }) {
       disableTransitionOnChange
       storageKey="theme-preference"
     >
+      <CursorTrail />
       {/* Progress Bar */}
       <motion.div
         className="fixed top-0 left-0 right-0 h-1 bg-gradient-to-r from-[hsl(var(--gradient-1))] via-[hsl(var(--gradient-2))] to-[hsl(var(--gradient-3))] z-50"
@@ -62,17 +65,17 @@ export function ClientLayout({ children }: { children: React.ReactNode }) {
 
       <ThreeScene />
 
-      <AnimatePresence mode="wait">
+      <AnimatePresence mode="wait" onExitComplete={() => window.scrollTo(0, 0)}>
         {isLoading ? (
-          <LoadingAnimation onComplete={() => setIsLoading(false)} />
+          <LoadingAnimation onComplete={() => {}} />
         ) : (
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
             transition={{
-              duration: 0.8,
-              ease: "easeOut",
+              duration: 1.8,
+              ease: [0.22, 1, 0.36, 1],
+              delay: 0.5
             }}
           >
             <main className="min-h-screen pt-20 scroll-smooth">

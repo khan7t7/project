@@ -81,30 +81,86 @@ export function LoadingAnimation({ onComplete }: { onComplete: () => void }) {
     <motion.div
       ref={mountRef}
       className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-background/95 backdrop-blur-md"
-      initial={{ opacity: 1 }}
-      animate={{ opacity: 0 }}
-      transition={{ duration: 1, delay: 2, ease: "easeInOut" }}
-      onAnimationComplete={onComplete}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{
+        opacity: 0,
+        y: -200,
+        filter: "blur(12px)",
+        transition: {
+          duration: 1.2,
+          ease: [0.22, 1, 0.36, 1],
+          opacity: {
+            duration: 0.8,
+            ease: [0.22, 1, 0.36, 1]
+          },
+          y: {
+            type: "spring",
+            stiffness: 100,
+            damping: 20
+          }
+        }
+      }}
+      transition={{
+        duration: 0.8,
+        ease: "easeInOut"
+      }}
     >
       <div ref={canvasRef} className="absolute inset-0" />
       <motion.div
-        initial={{ opacity: 0, y: 10 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
+        initial={{ opacity: 0, scale: 0.9 }}
+        animate={{
+          opacity: 1,
+          scale: 1,
+          transition: {
+            duration: 0.8,
+            ease: [0.34, 1.56, 0.64, 1]
+          }
+        }}
+        exit={{
+          opacity: 0,
+          scale: 0.85,
+          y: -100,
+          transition: {
+            duration: 1,
+            ease: [0.22, 1, 0.36, 1]
+          }
+        }}
         className="relative z-10"
       >
         <motion.div
           className="text-3xl font-bold text-primary text-center"
-          animate={{ opacity: [0.5, 1, 0.5] }}
-          transition={{ duration: 1.5, repeat: Infinity }}
+          animate={{
+            opacity: [0.5, 1, 0.5],
+            scale: [0.97, 1.03, 0.97],
+            y: [0, -8, 0]
+          }}
+          transition={{
+            duration: 2,
+            ease: "easeInOut",
+            repeat: Infinity,
+            times: [0, 0.5, 1]
+          }}
         >
           Loading...
         </motion.div>
         <motion.div
           className="text-sm text-muted-foreground mt-2 text-center"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.5 }}
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{
+            opacity: 0,
+            y: -20,
+            transition: {
+              duration: 0.8,
+              ease: [0.22, 1, 0.36, 1]
+            }
+          }}
+          transition={{
+            delay: 0.2,
+            duration: 0.6,
+            ease: [0.34, 1.56, 0.64, 1]
+          }}
         >
           Preparing your experience
         </motion.div>
