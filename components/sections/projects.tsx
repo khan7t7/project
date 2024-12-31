@@ -1,10 +1,10 @@
 "use client"
-
-import { MotionSection } from "@/components/ui/motion-section"
-import { Card } from "@/components/ui/card"
-import { motion } from "framer-motion"
-import { Code2, Brain, Globe2, LineChart } from "lucide-react"
-import { Badge } from "@/components/ui/badge"
+import { Badge } from "@/components/ui/badge";
+import { Card } from "@/components/ui/card";
+import { MotionSection } from "@/components/ui/motion-section";
+import { ThreeScene } from "@/components/ui/ThreeScene";
+import { motion } from "framer-motion";
+import { Brain, Code2, Globe2, LineChart } from "lucide-react";
 
 const projects = [
   {
@@ -43,12 +43,13 @@ const projects = [
 
 export function Projects() {
   return (
-    <MotionSection className="py-20 px-4" delay={0.7}>
-      <div className="max-w-4xl mx-auto">
+    <MotionSection className="py-20 px-4 relative overflow-hidden" delay={0.7}>
+      <ThreeScene /> {/* Add the Three.js scene */}
+      <div className="max-w-4xl mx-auto relative z-10">
         <h2 className="text-3xl font-bold mb-12 text-center">Projects</h2>
         <div className="grid gap-8">
           {projects.map((project, index) => {
-            const Icon = project.icon
+            const Icon = project.icon;
             return (
               <motion.div
                 key={index}
@@ -57,7 +58,7 @@ export function Projects() {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.2 }}
               >
-                <Card className="p-6 hover:shadow-lg transition-shadow">
+                <Card className="p-6 hover:shadow-lg transition-shadow bg-background/90 backdrop-blur-sm">
                   <div className="flex items-start gap-4">
                     <div className="bg-primary/10 p-3 rounded-lg">
                       <Icon className="w-6 h-6 text-primary" />
@@ -71,17 +72,19 @@ export function Projects() {
                       <p className="mb-4">{project.summary}</p>
                       <div className="flex flex-wrap gap-2">
                         {project.tags.map((tag, tagIndex) => (
-                          <Badge key={tagIndex} variant="secondary">{tag}</Badge>
+                          <Badge key={tagIndex} variant="secondary">
+                            {tag}
+                          </Badge>
                         ))}
                       </div>
                     </div>
                   </div>
                 </Card>
               </motion.div>
-            )
+            );
           })}
         </div>
       </div>
     </MotionSection>
-  )
+  );
 }

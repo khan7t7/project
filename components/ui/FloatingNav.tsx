@@ -88,7 +88,7 @@ const FloatingNav = () => {
   }
 
   return (
-    <div className="fixed bottom-14 left-1/2 -translate-x-1/2 z-50">
+    <div className="fixed bottom-10 left-1/2 -translate-x-1/2 z-50">
       {/* Desktop Navigation */}
       <nav className="hidden md:flex backdrop-blur-sm bg-background/30 border border-border/50 rounded-full px-4 py-2 shadow-lg gap-2">
         {sections.map(({ id, label }) => (
