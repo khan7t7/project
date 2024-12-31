@@ -9,6 +9,9 @@ export function ThreeScene() {
   useEffect(() => {
     if (!mountRef.current) return;
 
+    // Store ref in a variable for cleanup
+    const currentRef = mountRef.current;
+
     // Reduce particle count for mobile
     const isMobile = window.innerWidth < 768;
     const particlesCount = isMobile ? 2000 : 5000;
@@ -23,7 +26,7 @@ export function ThreeScene() {
     });
     renderer.setSize(window.innerWidth, window.innerHeight);
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-    mountRef.current.appendChild(renderer.domElement);
+    currentRef.appendChild(renderer.domElement);
 
     // Particles
     const particlesGeometry = new THREE.BufferGeometry();
@@ -120,7 +123,7 @@ export function ThreeScene() {
     return () => {
       window.removeEventListener('mousemove', handleMouseMove);
       window.removeEventListener('resize', handleResize);
-      mountRef.current?.removeChild(renderer.domElement);
+      currentRef?.removeChild(renderer.domElement);
     };
   }, []);
 
