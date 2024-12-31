@@ -83,16 +83,31 @@ export function Hero() {
             {/* Glow Effect */}
             <div className="absolute inset-0 rounded-full bg-gradient-to-r from-[hsl(var(--gradient-1))] via-[hsl(var(--gradient-2))] to-[hsl(var(--gradient-3))] animate-pulse-slow opacity-50 blur-2xl" />
 
-            {/* Image Container */}
+            {/* Image Container
             <div className="relative w-full h-full rounded-full overflow-hidden">
               <Image
-                src="/DP.png"
+                src="/DP.jpg"
+                alt="Mustafa Ahmad"
+                fill
+                className="object-cover transition-transform duration-500 hover:scale-105"
+                priority
+              />
+            </div> */}
+
+
+ {/* Image Container */}
+            <div className="relative w-full h-full overflow-hidden" style={{
+              clipPath: "polygon(50% 0%, 100% 75%, 0% 75%)"
+            }}>
+              <Image
+                src="/DP.jpg"
                 alt="Mustafa Ahmad"
                 fill
                 className="object-cover transition-transform duration-500 hover:scale-105"
                 priority
               />
             </div>
+
           </div>
 
           <Terminal className="w-12 h-12 mx-auto text-primary mb-4 animate-float" />
