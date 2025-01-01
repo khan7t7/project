@@ -65,7 +65,7 @@ export function CursorTrail() {
         <div
           key={trail.id}
           className="cursor-trail"
-          style={{
+        style={{
             left: trail.x,
             top: trail.y,
             transform: `translate(-50%, -50%) scale(${1 - (index * 0.1)})`,

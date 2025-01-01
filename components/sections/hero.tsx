@@ -1,10 +1,11 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
+import { cn } from "@/lib/utils"
 import { motion, useScroll, useTransform } from "framer-motion"
-import { LinkedinIcon, MailIcon, PhoneIcon, Terminal } from "lucide-react"
+import { LinkedinIcon, MailIcon, PhoneIcon } from "lucide-react"
 import Image from "next/image"
-import { useRef } from "react"
+import { useRef, useState } from "react"
 
 export function Hero() {
   const containerRef = useRef<HTMLDivElement>(null)
@@ -19,6 +20,9 @@ export function Hero() {
 
   const taglineX = useTransform(scrollYProgress, [0, 0.3], [0, 50])
   const taglineOpacity = useTransform(scrollYProgress, [0, 0.3], [1, 0])
+
+  const [imageError, setImageError] = useState(false)
+  const [imageLoaded, setImageLoaded] = useState(false)
 
   return (
     <motion.section
@@ -101,16 +105,25 @@ export function Hero() {
             }}>
               <Image
                 src="/DP.jpg"
-                alt="Mustafa Ahmad"
+                alt="Mustafa Ahmad - Full-Stack Developer"
                 fill
-                className="object-cover transition-transform duration-500 hover:scale-105"
                 priority
+                loading="eager"
+                onLoad={() => setImageLoaded(true)}
+                onError={() => {
+                  setImageError(true)
+                  console.error('Failed to load image')
+                }}
+                className={cn(
+                  "object-cover transition-transform duration-500 hover:scale-105",
+                  !imageLoaded && "blur-sm"
+                )}
               />
             </div>
 
           </div>
 
-          <Terminal className="w-12 h-12 mx-auto text-primary mb-4 animate-float" />
+          {/* <Terminal className="w-12 h-12 mx-auto text-primary mb-4 animate-float" /> */}
         </motion.div>
 
         <div className="sticky top-4">
@@ -134,8 +147,8 @@ export function Hero() {
             }}
             className="mb-8"
           >
-            <p className="text-xl md:text-2xl text-muted-foreground bubble-text">
-              Full-Stack Developer | ERPNext Expert | System Administrator | Gen AI Enthusiast
+            <p className="text-xl md:text-2xl bubble-text">
+              Full-Stack Developer | Gen AI Enthusiast | ERPNext Expert | System Administrator
             </p>
           </motion.div>
         </div>
