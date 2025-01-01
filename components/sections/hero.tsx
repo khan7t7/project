@@ -86,27 +86,14 @@ export function Hero() {
               {/* Glow Effect */}
               <div className="absolute inset-0 rounded-full bg-gradient-to-r from-[hsl(var(--gradient-1))] via-[hsl(var(--gradient-2))] to-[hsl(var(--gradient-3))] animate-pulse-slow opacity-50 blur-2xl" />
 
-              {/* Image Container
-              <div className="relative w-full h-full rounded-full overflow-hidden">
-                <Image
-                  src="/DP.jpg"
-                  alt="Mustafa Ahmad"
-                  fill
-                  className="object-cover transition-transform duration-500 hover:scale-105"
-                  priority
-                />
-              </div> */}
-
-
- {/* Image Container */}
+              {/* Image Container */}
               {/* <div className="relative w-full h-full overflow-hidden" style={{
                 clipPath: "polygon(50% 0%, 100% 75%, 0% 75%)"
               }}>
                 <Image
-                  src="/DP.png"
+                  src="/DP.jpg"
                   alt="Mustafa Ahmad - Full-Stack Developer"
                   fill
-                  sizes="(max-width: 768px) 160px, 192px"
                   priority
                   loading="eager"
                   onLoad={() => setImageLoaded(true)}
@@ -120,10 +107,7 @@ export function Hero() {
                   )}
                 />
               </div> */}
-
             </div>
-
-            {/* <Terminal className="w-12 h-12 mx-auto text-primary mb-4 animate-float" /> */}
           </motion.div>
 
           <div className="relative top-4">
