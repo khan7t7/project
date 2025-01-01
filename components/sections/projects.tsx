@@ -46,7 +46,7 @@ export function Projects() {
     <MotionSection className="py-20 px-4 relative overflow-hidden" delay={0.7}>
       <ThreeScene /> {/* Add the Three.js scene */}
       <div className="max-w-4xl mx-auto relative z-10">
-        <h2 className="text-3xl font-bold mb-12 text-center">Projects</h2>
+        <h2 className="text-4xl md:text-5xl font-extrabold mb-8 text-center gradient-text bubble-text">Projects</h2>
         <div className="grid gap-8">
           {projects.map((project, index) => {
             const Icon = project.icon;
@@ -58,7 +58,7 @@ export function Projects() {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.2 }}
               >
-                <Card className="p-6 hover:shadow-lg transition-shadow bg-background/90">
+                <Card className="p-6 hover:shadow-lg transition-shadow backdrop-blur-sm bg-background/70">
                   <div className="flex items-start gap-4">
                     <div className="bg-primary/10 p-3 rounded-lg">
                       <Icon className="w-6 h-6 text-primary" />

@@ -36,7 +36,7 @@ export function Certifications() {
   return (
     <MotionSection className="py-20 px-4 bg-muted/30" delay={0.6}>
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-3xl font-bold mb-12 text-center">Certifications</h2>
+        <h2 className="text-4xl md:text-5xl font-extrabold mb-8 text-center gradient-text bubble-text">Certifications</h2>
         <div className="grid md:grid-cols-2 gap-6">
           {certifications.map((cert, index) => (
             <motion.div
@@ -46,7 +46,7 @@ export function Certifications() {
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
             >
-              <Card className="p-6 h-full hover:shadow-lg transition-shadow">
+              <Card className="p-6 h-full hover:shadow-lg transition-shadow backdrop-blur-sm bg-background/70">
                 <div className="flex items-start gap-4">
                   <Award className="w-8 h-8 text-primary shrink-0" />
                   <div>

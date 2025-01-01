@@ -7,17 +7,16 @@ import { Projects } from "@/components/sections/projects";
 import { Skills } from "@/components/sections/skills";
 import { FloatingNav } from "@/components/ui/FloatingNav";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
-import Head from 'next/head'; // Import the Head component
+import { Metadata } from 'next';
+import Head from 'next/head';
 
 export default function Home() {
   return (
     <>
-      {/* Use the Head component for <head> content */}
       <Head>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      {/* FloatingNav should likely be outside the main content */}
       <FloatingNav />
 
       <main className="bg-background">
@@ -49,4 +48,15 @@ export default function Home() {
       </main>
     </>
   );
+}
+
+export const metadata: Metadata = {
+  metadataBase: new URL('https://itsmustafa.vercel.app'),
+  alternates: {
+    canonical: '/',
+  },
+  openGraph: {
+    title: 'Home | Mustafa Ahmad - Full-Stack Developer',
+    description: 'Welcome to my portfolio. Explore my work in full-stack development, ERPNext, and AI integration.',
+  },
 }

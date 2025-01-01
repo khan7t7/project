@@ -4,6 +4,7 @@ import { Card } from "@/components/ui/card"
 import { MotionSection } from "@/components/ui/motion-section"
 import { motion } from "framer-motion"
 import { BriefcaseIcon } from "lucide-react"
+import { useEffect } from "react"
 
 const experiences = [
   {
@@ -42,10 +43,30 @@ const experiences = [
 ]
 
 export function Experience() {
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate-in')
+        }
+      })
+    }, {
+      threshold: 0.1
+    })
+
+    const elements = document.querySelectorAll('.animate-on-scroll')
+    elements.forEach(el => observer.observe(el))
+
+    return () => {
+      elements.forEach(el => observer.unobserve(el))
+      observer.disconnect()
+    }
+  }, [])
+
   return (
     <MotionSection className="py-20 px-4" delay={0.4}>
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-3xl font-bold mb-12 text-center">Experience</h2>
+        <h2 className="text-4xl md:text-5xl font-extrabold mb-8 text-center gradient-text bubble-text">Experience</h2>
         <div className="relative">
           {/* Timeline line */}
           <div className="absolute left-0 md:left-1/2 transform -translate-x-px h-full w-0.5 bg-border" />

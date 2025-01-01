@@ -3,8 +3,8 @@
 import { ThemeProvider } from '@/components/theme-provider'
 import { CursorTrail } from "@/components/ui/CursorTrail"
 import { LoadingAnimation } from "@/components/ui/LoadingAnimation"
+import { SparklingSphere } from "@/components/ui/SparklingSphere"
 import { StickyHeader } from "@/components/ui/sticky-header"
-import { ThreeScene } from "@/components/ui/ThreeScene"
 import { AnimatePresence, motion, useScroll, useSpring } from 'framer-motion'
 import { useEffect, useState } from 'react'
 
@@ -18,67 +18,36 @@ export function ClientLayout({ children }: { children: React.ReactNode }) {
   })
 
   useEffect(() => {
+    // Shorter loading time
     Promise.all([
       document.fonts.ready,
-      new Promise(resolve => setTimeout(resolve, 2000))
+      new Promise(resolve => setTimeout(resolve, 1000))
     ]).then(() => {
       setIsLoading(false)
     })
   }, [])
 
   return (
-    <ThemeProvider
-      attribute="class"
-      defaultTheme="dark"
-      enableSystem
-      disableTransitionOnChange
-      storageKey="theme-preference"
-    >
+    <ThemeProvider>
       <CursorTrail />
-      {/* Progress Bar */}
       <motion.div
         className="fixed top-0 left-0 right-0 h-1 bg-gradient-to-r from-[hsl(var(--gradient-1))] via-[hsl(var(--gradient-2))] to-[hsl(var(--gradient-3))] z-50"
         style={{ scaleX, transformOrigin: "0%" }}
       />
 
-      {/* Sticky Header */}
       <StickyHeader />
+      <SparklingSphere />
 
-      {/* Site-wide Background */}
-      <div className="fixed inset-0 z-[-2]">
-        <motion.div
-          className="absolute inset-0 tech-background"
-          style={{
-            opacity: useSpring(scrollYProgress, { stiffness: 100, damping: 30 }),
-            scale: useSpring(1 - scrollYProgress.get() * 0.1, { stiffness: 100, damping: 30 })
-          }}
-        />
-        <motion.div
-          className="absolute inset-0 grid-background"
-          style={{
-            opacity: useSpring(scrollYProgress, { stiffness: 100, damping: 30 }),
-            scale: useSpring(1 + scrollYProgress.get() * 0.1, { stiffness: 100, damping: 30 })
-          }}
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/0 via-background/50 to-background" />
-      </div>
-
-      <ThreeScene />
-
-      <AnimatePresence mode="wait" onExitComplete={() => window.scrollTo(0, 0)}>
+      <AnimatePresence mode="wait">
         {isLoading ? (
           <LoadingAnimation onComplete={() => {}} />
         ) : (
           <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{
-              duration: 1.8,
-              ease: [0.22, 1, 0.36, 1],
-              delay: 0.5
-            }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5 }}
           >
-            <main className="min-h-screen pt-20 scroll-smooth">
+            <main className="min-h-screen pt-20">
               {children}
             </main>
             <footer className="text-center py-1.5 text-sm text-muted-foreground mt-auto">

@@ -89,7 +89,7 @@ export function Skills() {
     <MotionSection className="py-20 px-4 relative overflow-hidden" delay={0.5}>
       <div className="absolute inset-0 tech-background" />
       <div className="max-w-4xl mx-auto relative">
-        <h2 className="text-3xl font-bold mb-12 text-center gradient-text">Skills</h2>
+        <h2 className="text-4xl md:text-5xl font-extrabold mb-8 text-center gradient-text bubble-text">Skills</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-20">
           {skillCategories.map((category, index) => (
             <motion.div
@@ -102,7 +102,7 @@ export function Skills() {
               <h3 className="text-xl font-semibold mb-4">{category.name}</h3>
               <div className="grid gap-4">
                 {category.skills.map((skill, skillIndex) => (
-                  <Card key={skillIndex} className="p-4 gradient-border">
+                  <Card key={skillIndex} className="p-4 gradient-border backdrop-blur-sm bg-background/70">
                     <div className="flex justify-between mb-2">
                       <span className="font-medium">{skill.name}</span>
                       <span className="text-muted-foreground">{skill.level}%</span>
