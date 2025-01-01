@@ -1,4 +1,5 @@
 import { ErrorBoundary } from '@/components/error-boundary'
+import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import type { Metadata, Viewport } from 'next'
 import { Inter } from 'next/font/google'
@@ -88,6 +89,7 @@ export default function RootLayout({
           </ClientLayout>
         </ErrorBoundary>
         <SpeedInsights />
+        <Analytics />
       </body>
     </html>
   )
