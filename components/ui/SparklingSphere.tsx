@@ -25,9 +25,8 @@ export function SparklingSphere() {
 
       // Scene setup
       scene.background = null // Make background transparent
-
       renderer.setSize(window.innerWidth, window.innerHeight)
-      renderer.setClearColor(0x000000, 0) // Transparent background
+      renderer.setClearColor(0x000000, 0)
       renderer.toneMapping = THREE.ACESFilmicToneMapping
       renderer.toneMappingExposure = 1.5
       mountRef.current.appendChild(renderer.domElement)
@@ -37,19 +36,13 @@ export function SparklingSphere() {
       const controls = new OrbitControls(camera, renderer.domElement)
       controls.enableDamping = true
       controls.dampingFactor = 0.1
-
-      // Add zoom constraints
       controls.enableZoom = true
       controls.minDistance = 3
       controls.maxDistance = 8
       controls.zoomSpeed = 0.5
-
-      // Disable pan and rotation for better stability
       controls.enablePan = false
       controls.maxPolarAngle = Math.PI * 0.65
       controls.minPolarAngle = Math.PI * 0.35
-
-      // Add smooth zoom handling
       controls.enableRotate = true
       controls.rotateSpeed = 0.5
 
@@ -74,37 +67,9 @@ export function SparklingSphere() {
       pointLight.position.set(5, 5, 5)
       scene.add(pointLight)
 
-      // Group for all particles
+      // Group for particles
       const group = new THREE.Group()
       scene.add(group)
-
-      // Add cube in the center
-      const cubeGeometry = new THREE.BoxGeometry(0.8, 0.8, 0.8)
-      const cubeMaterial = new THREE.MeshStandardMaterial({
-        color: 0xffffff,
-        metalness: 0.7,
-        roughness: 0.2,
-        emissive: 0x88ccff,
-        emissiveIntensity: 0.5,
-        transparent: true,
-        opacity: 0.8
-      })
-      const cube = new THREE.Mesh(cubeGeometry, cubeMaterial)
-      group.add(cube)
-
-      // Add smaller square inside the cube
-      const squareGeometry = new THREE.BoxGeometry(0.4, 0.4, 0.4)
-      const squareMaterial = new THREE.MeshStandardMaterial({
-        color: 0x61dafb,
-        metalness: 0.9,
-        roughness: 0.1,
-        emissive: 0x61dafb,
-        emissiveIntensity: 0.7,
-        transparent: true,
-        opacity: 0.9
-      })
-      const square = new THREE.Mesh(squareGeometry, squareMaterial)
-      group.add(square)
 
       // Interactive parameters
       const interactionRadius = 1.2
@@ -260,13 +225,6 @@ export function SparklingSphere() {
       const animate = () => {
         requestAnimationFrame(animate)
         updateParticles()
-
-        // Rotate cube and square in different directions
-        cube.rotation.x += 0.01
-        cube.rotation.y += 0.01
-        square.rotation.x -= 0.02
-        square.rotation.z += 0.02
-
         controls.update()
         composer.render()
       }

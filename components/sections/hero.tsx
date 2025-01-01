@@ -32,46 +32,17 @@ export function Hero() {
       >
         {/* Left Side Decoration */}
         <div className="fixed left-0 top-0 bottom-0 w-64 pointer-events-none">
-          <div className="absolute inset-y-0 left-12 w-[1px] bg-gradient-to-b from-transparent via-border to-transparent" />
-          <div className="absolute inset-y-0 left-24 w-[1px] bg-gradient-to-b from-transparent via-border/50 to-transparent" />
           <div className="absolute top-1/4 left-8 w-32 h-32 rounded-full bg-gradient-to-r from-[hsl(var(--gradient-1))] to-[hsl(var(--gradient-2))] opacity-20 blur-3xl animate-pulse-slow" />
           <div className="absolute bottom-1/4 left-16 w-24 h-24 rounded-full bg-gradient-to-r from-[hsl(var(--gradient-2))] to-[hsl(var(--gradient-3))] opacity-15 blur-2xl floating-2" />
         </div>
 
         {/* Right Side Decoration */}
         <div className="fixed right-0 top-0 bottom-0 w-64 pointer-events-none">
-          <div className="absolute inset-y-0 right-12 w-[1px] bg-gradient-to-b from-transparent via-border to-transparent" />
-          <div className="absolute inset-y-0 right-24 w-[1px] bg-gradient-to-b from-transparent via-border/50 to-transparent" />
           <div className="absolute top-1/3 right-16 w-32 h-32 rounded-full bg-gradient-to-r from-[hsl(var(--gradient-2))] to-[hsl(var(--gradient-3))] opacity-20 blur-3xl animate-pulse-slow" />
           <div className="absolute bottom-1/3 right-8 w-24 h-24 rounded-full bg-gradient-to-r from-[hsl(var(--gradient-3))] to-[hsl(var(--gradient-1))] opacity-15 blur-2xl floating-1" />
         </div>
 
-        {/* Background Grid Lines */}
-        <div className="fixed inset-0 flex justify-between px-8 pointer-events-none opacity-10">
-          {[...Array(8)].map((_, i) => (
-            <div key={i} className="w-[1px] h-full bg-gradient-to-b from-transparent via-border/30 to-transparent" />
-          ))}
-        </div>
-
-        {/* Diagonal Lines */}
-        <div className="fixed inset-0 pointer-events-none opacity-5">
-          <div className="absolute -left-1/4 top-0 w-1/2 h-screen transform rotate-12 bg-gradient-to-b from-transparent via-border/20 to-transparent" />
-          <div className="absolute -right-1/4 bottom-0 w-1/2 h-screen transform -rotate-12 bg-gradient-to-b from-transparent via-border/20 to-transparent" />
-        </div>
-
-        <motion.div
-          className="absolute w-32 h-32 rounded-full bg-gradient-to-r from-[hsl(var(--gradient-1))] to-[hsl(var(--gradient-2))] blur-3xl opacity-20 floating-1"
-          style={{ top: '20%', left: '20%' }}
-        />
-        <motion.div
-          className="absolute w-32 h-32 rounded-full bg-gradient-to-r from-[hsl(var(--gradient-2))] to-[hsl(var(--gradient-3))] blur-3xl opacity-20 floating-2"
-          style={{ bottom: '20%', right: '20%' }}
-        />
-        <motion.div
-          className="absolute w-24 h-24 rounded-full bg-gradient-to-r from-[hsl(var(--gradient-3))] to-[hsl(var(--gradient-1))] blur-3xl opacity-10 floating-3"
-          style={{ top: '40%', right: '30%' }}
-        />
-
+        {/* Content */}
         <div className="relative w-full max-w-4xl px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
