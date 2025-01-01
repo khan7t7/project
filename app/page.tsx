@@ -60,3 +60,7 @@ export const metadata: Metadata = {
     description: 'Welcome to my portfolio. Explore my work in full-stack development, ERPNext, and AI integration.',
   },
 }
+
+export const runtime = 'edge'
+export const preferredRegion = 'auto'
+export const dynamic = 'force-dynamic'

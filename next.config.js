@@ -5,20 +5,36 @@ const nextConfig = {
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
   },
-  headers: async () => {
-    return [
-      {
-        source: '/:all*(svg|jpg|png)',
-        locale: false,
-        headers: [
-          {
-            key: 'Cache-Control',
-            value: 'public, max-age=31536000, immutable',
-          },
-        ],
-      },
-    ]
+  poweredByHeader: false,
+  compress: true,
+  swcMinify: true,
+  reactStrictMode: true,
+  optimizeFonts: true,
+  experimental: {
+    optimizeCss: true,
+    turbo: true,
   },
+  headers: async () => [
+    {
+      source: '/:all*(svg|jpg|png)',
+      locale: false,
+      headers: [
+        {
+          key: 'Cache-Control',
+          value: 'public, max-age=31536000, immutable',
+        },
+      ],
+    },
+    {
+      source: '/:path*',
+      headers: [
+        {
+          key: 'X-DNS-Prefetch-Control',
+          value: 'on'
+        },
+      ],
+    },
+  ],
 }
 
 module.exports = nextConfig
