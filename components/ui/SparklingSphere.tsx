@@ -12,24 +12,20 @@ export function SparklingSphere() {
   const [hasError, setHasError] = useState(false)
 
   useEffect(() => {
-    if (!mountRef.current || hasError) return
+    if (!mountRef.current) return
 
     try {
-      // Scene setup
       const scene = new THREE.Scene()
+      const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000)
+      const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true })
+      const raycaster = new THREE.Raycaster()
+      const mousePos = new THREE.Vector2()
+      const mousePosition3D = new THREE.Vector3()
+      const plane = new THREE.Plane(new THREE.Vector3(0, 0, 1), 0)
+
+      // Scene setup
       scene.background = null // Make background transparent
 
-      const camera = new THREE.PerspectiveCamera(
-        75,
-        window.innerWidth / window.innerHeight,
-        0.1,
-        1000
-      )
-
-      const renderer = new THREE.WebGLRenderer({
-        antialias: true,
-        alpha: true,
-      })
       renderer.setSize(window.innerWidth, window.innerHeight)
       renderer.setClearColor(0x000000, 0) // Transparent background
       renderer.toneMapping = THREE.ACESFilmicToneMapping
@@ -109,10 +105,6 @@ export function SparklingSphere() {
       })
       const square = new THREE.Mesh(squareGeometry, squareMaterial)
       group.add(square)
-
-      // Mouse tracking with raycaster
-      const raycaster = new THREE.Raycaster()
-      const mousePos = new THREE.Vector2()
 
       // Interactive parameters
       const interactionRadius = 1.2
@@ -212,18 +204,16 @@ export function SparklingSphere() {
         })
 
         raycaster.setFromCamera(mousePos, camera)
-        const intersectPlane = new THREE.Plane(new THREE.Vector3(0, 0, 1), 0)
-        const mousePosition3D = new THREE.Vector3()
-        raycaster.ray.intersectPlane(intersectPlane, mousePosition3D)
+        raycaster.ray.intersectPlane(plane, mousePosition3D)
 
         particles.forEach((particle) => {
-          const distanceToMouse = mousePosition3D.distanceTo(particle.position)
+          const distanceToMouse = particle.position.distanceTo(mousePosition3D)
           const isInRange = distanceToMouse < interactionRadius
 
           if (isInRange) {
             const force = dispersalForce * (1 - distanceToMouse / interactionRadius)
             const repulsionDir = particle.position.clone().sub(mousePosition3D).normalize()
-            particle.velocity.add(repulsionDir.multiplyScalar(force * (1 + Math.random() * 0.2)))
+            particle.velocity.add(repulsionDir.multiplyScalar(force))
 
             const intensity = THREE.MathUtils.lerp(maxGlowIntensity, baseGlowIntensity, distanceToMouse / interactionRadius)
             particle.mesh.material.emissive = particle.baseColor.clone().multiplyScalar(intensity)
@@ -255,8 +245,14 @@ export function SparklingSphere() {
           composer.setSize(window.innerWidth, window.innerHeight)
         },
         handleMouseMove: (event: MouseEvent) => {
-          mousePos.x = (event.clientX / window.innerWidth) * 2 - 1
-          mousePos.y = -(event.clientY / window.innerHeight) * 2 + 1
+          // Get mouse position relative to canvas
+          const rect = renderer.domElement.getBoundingClientRect()
+          mousePos.x = ((event.clientX - rect.left) / rect.width) * 2 - 1
+          mousePos.y = -((event.clientY - rect.top) / rect.height) * 2 + 1
+
+          // Update raycaster
+          raycaster.setFromCamera(mousePos, camera)
+          raycaster.ray.intersectPlane(plane, mousePosition3D)
         }
       }
 

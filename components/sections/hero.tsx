@@ -1,10 +1,8 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-import { cn } from "@/lib/utils"
 import { motion, useScroll, useTransform } from "framer-motion"
 import { LinkedinIcon, MailIcon, PhoneIcon } from "lucide-react"
-import Image from "next/image"
 import { useRef, useState } from "react"
 
 export function Hero() {
@@ -88,31 +86,7 @@ export function Hero() {
               {/* Glow Effect */}
               <div className="absolute inset-0 rounded-full bg-gradient-to-r from-[hsl(var(--gradient-1))] via-[hsl(var(--gradient-2))] to-[hsl(var(--gradient-3))] animate-pulse-slow opacity-50 blur-2xl" />
 
-              {/* Image Container */}
-              <div className="relative w-full h-full overflow-hidden" style={{
-                clipPath: "polygon(50% 0%, 100% 75%, 0% 75%)"
-              }}>
-                <Image
-                  src="/DP.jpg"
-                  alt="Mustafa Ahmad - Full-Stack Developer"
-                  fill
-                  sizes="(max-width: 768px) 160px, 192px"
-                  priority
-                  loading="eager"
-                  quality={75}
-                  placeholder="blur"
-                  blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRg..."
-                  onLoad={() => setImageLoaded(true)}
-                  onError={() => {
-                    setImageError(true)
-                    console.error('Failed to load image')
-                  }}
-                  className={cn(
-                    "object-cover transition-transform duration-500 hover:scale-105",
-                    !imageLoaded && "blur-sm"
-                  )}
-                />
-              </div>
+
             </div>
           </motion.div>
 

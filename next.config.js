@@ -7,12 +7,9 @@ const nextConfig = {
   },
   poweredByHeader: false,
   compress: true,
-  swcMinify: true,
   reactStrictMode: true,
-  optimizeFonts: true,
   experimental: {
     optimizeCss: true,
-    turbo: true,
   },
   headers: async () => [
     {
