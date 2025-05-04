@@ -1,7 +1,7 @@
 "use client"
 
 import { ThemeProvider } from '@/components/theme-provider'
-import { LoadingAnimation } from "@/components/ui/LoadingAnimation"
+// import { LoadingAnimation } from "@/components/ui/LoadingAnimation"
 import { AnimatePresence, motion, useScroll, useSpring } from 'framer-motion'
 import dynamic from 'next/dynamic'
 import { useEffect, useState } from 'react'
@@ -44,10 +44,10 @@ export function ClientLayout({ children }: { children: React.ReactNode }) {
       <StickyHeader />
       {!isLoading && <SparklingSphere />}
 
-      <AnimatePresence mode="wait">
+      {/* <AnimatePresence mode="wait">
         {isLoading ? (
           <LoadingAnimation onComplete={() => {}} />
-        ) : (
+        ) : ( */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -60,8 +60,8 @@ export function ClientLayout({ children }: { children: React.ReactNode }) {
               Made by Mustafa | with <span className="text-red-500">🩵</span>
             </footer>
           </motion.div>
-        )}
-      </AnimatePresence>
+        {/* )}
+      </AnimatePresence> */}
     </ThemeProvider>
   )
 }
