@@ -8,15 +8,16 @@ import { useEffect } from "react"
 
 const experiences = [
   {
-    title: "Full-Stack Engineer | Cloud Systems Admin",
+    title: "Full-Stack Engineer | ERPNext Specialist",
     company: "Al Ansari Group LLC",
     location: "Oman",
-    period: "Oct 2023 - Present",
+    period: "Feb 2023 - Present",
     points: [
-      "Managed system administration including ERPNext Systems, development tasks, and business processes",
+      "Led Erpnext development and AI integration, automating 50% of manual processes",
       "Integrated AI solutions to enhance system functionality and optimize organizational efficiency",
-      "Developed Python APIs and integrated machine learning models",
-      "Provided comprehensive IT technical support and conducted user training sessions"
+      "Migrated 10M+ records from Orion ERP to Erpnext, ensuring 99.9% data integrity",
+      "Integrated Erpnext with Power BI, reducing data retrieval time by 70%",
+      "Conducted monthly system audits, improving Erpnext performance by 25%"
     ]
   },
   {
@@ -25,7 +26,7 @@ const experiences = [
     location: "Pakistan",
     period: "Nov 2022 - Jan 2023",
     points: [
-      "Focused on Python API development, API integration, and Ajax requests",
+      "Built dynamic front-end components with React & Next.js, improving UI responsiveness",
       "Developed APIs, Databases, and Websites"
     ]
   },
@@ -35,7 +36,7 @@ const experiences = [
     location: "Pakistan",
     period: "Oct 2020 - Oct 2021",
     points: [
-      "Managed link building, guest posting, and SEO optimization",
+      "Successfully led SEO strategies for over eight websites, Improved rankings & organic traffic",
       "Executed email marketing and social media management initiatives",
       "Created content writing strategies to enhance brand visibility"
     ]
