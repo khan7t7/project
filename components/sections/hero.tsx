@@ -83,7 +83,7 @@ export function Hero() {
               className="mb-8"
             >
               <p className="text-xl md:text-2xl bubble-text">
-                Full-Stack Developer | Gen AI Enthusiast | ERPNext Expert | System Administrator
+                Full-Stack Software Engineer | ERPNext Techno-Functional Specialist | Gen AI Enthusiast
               </p>
             </motion.div>
           </div>
