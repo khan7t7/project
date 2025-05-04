@@ -14,7 +14,7 @@ export function About() {
         <Card className="mb-8 backdrop-blur-sm bg-background/70">
           <CardContent className="p-6">
             <p className="text-lg leading-relaxed text-foreground/80">
-              Results-driven full-stack developer with a passion for AI and building innovative solutions.
+              Full-Stack Engineer bridging tech and business as an ERP Techno-Functional Specialist. Passionate about exploring the innovative potential of Generative AI.
             </p>
           </CardContent>
         </Card>
