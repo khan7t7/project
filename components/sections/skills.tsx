@@ -39,17 +39,21 @@ const skillCategories = [
     ]
   },
   {
-    name: "Web Development",
-    skills: [
-      { name: "RESTful APIs", level: 91, color: "from-[hsl(var(--gradient-1))] to-[hsl(var(--gradient-2))]" },
-      { name: "FAST APIs", level: 88, color: "from-[hsl(var(--gradient-2))] to-[hsl(var(--gradient-3))]" },
-      { name: "Apache Tomcat", level: 89, color: "from-[hsl(var(--gradient-3))] to-[hsl(var(--gradient-1))]" },
-      { name: "WordPress", level: 86, color: "from-[hsl(var(--gradient-1))] to-[hsl(var(--gradient-2))]" },
-      { name: "CodeIgniter", level: 85, color: "from-[hsl(var(--gradient-2))] to-[hsl(var(--gradient-3))]" },
-      { name: "Bootstrap", level: 89, color: "from-[hsl(var(--gradient-3))] to-[hsl(var(--gradient-1))]" },
-      { name: "jQuery", level: 87, color: "from-[hsl(var(--gradient-1))] to-[hsl(var(--gradient-2))]" }
-    ]
-  },
+    {
+  name: "Web Development",
+  skills: [
+    { name: "RESTful APIs", level: 91, color: "from-[hsl(var(--gradient-1))] to-[hsl(var(--gradient-2))]" },
+    { name: "FAST APIs", level: 88, color: "from-[hsl(var(--gradient-2))] to-[hsl(var(--gradient-3))]" },
+    { name: "Apache Tomcat", level: 89, color: "from-[hsl(var(--gradient-3))] to-[hsl(var(--gradient-1))]" },
+    { name: "WordPress", level: 86, color: "from-[hsl(var(--gradient-1))] to-[hsl(var(--gradient-2))]" },
+    { name: "CodeIgniter", level: 85, color: "from-[hsl(var(--gradient-2))] to-[hsl(var(--gradient-3))]" },
+    { name: "Bootstrap", level: 89, color: "from-[hsl(var(--gradient-3))] to-[hsl(var(--gradient-1))]" },
+    { name: "React", level: 92, color: "from-[hsl(var(--gradient-1))] to-[hsl(var(--gradient-2))]" },
+    { name: "Next.js", level: 90, color: "from-[hsl(var(--gradient-2))] to-[hsl(var(--gradient-3))]" },
+    { name: "Three.Js", level: 89, color: "from-[hsl(var(--gradient-1))] to-[hsl(var(--gradient-2))]" },
+    { name: "jQuery", level: 87, color: "from-[hsl(var(--gradient-2))] to-[hsl(var(--gradient-3))]" }
+  ]
+},
   {
     name: "Database & Infrastructure",
     skills: [
