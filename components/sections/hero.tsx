@@ -98,7 +98,7 @@ export function Hero() {
             className="flex gap-4 flex-wrap justify-center"
           >
             <Button variant="outline" size="lg" asChild className="gradient-border">
-              <a href="https://linkedin.com/in/khan777" target="_blank" rel="noopener noreferrer">
+              <a href="https://linkedin.com/in/mustafaai" target="_blank" rel="noopener noreferrer">
                 <LinkedinIcon className="mr-2 h-5 w-5" />
                 LinkedIn
               </a>
