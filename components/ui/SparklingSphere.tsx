@@ -84,11 +84,20 @@ export function SparklingSphere() {
         current: 0,
         progress: 0,
         colors: [
-          [0x00ff00, 0x00ff88, 0x00ffff], // Cyan-Green
-          [0xff0000, 0xff0088, 0xff00ff], // Magenta-Red
-          [0x0000ff, 0x8800ff, 0xff00ff], // Purple-Blue
-          [0xffff00, 0xff8800, 0xff0000], // Yellow-Orange
-          [0x00ffff, 0x0088ff, 0x0000ff]  // Blue-Cyan
+              // Set 1: Core Theme Gradient (Cool Blue to Deep Purple)
+          [0xa0d2eb, 0xd0bdf4, 0x8458B3], // Ice Cold -> Medium Purple -> Purple Pain
+
+          // Set 2: Light & Ethereal (Very Light Purple to Icy Blue)
+          [0xe5eaf5, 0xd0bdf4, 0xa0d2eb], // Freeze Purple -> Medium Purple -> Ice Cold
+
+          // Set 3: Rich Purples with Muted Tone (Medium Purple to Heavy Purple)
+          [0xd0bdf4, 0x8458B3, 0xa28089], // Medium Purple -> Purple Pain -> Heavy Purple
+
+          // Set 4: Contrasting Cool to Warm Purples (Icy Blue through Muted Mauve to Vibrant Purple)
+          [0xa0d2eb, 0xa28089, 0x8458B3], // Ice Cold -> Heavy Purple -> Purple Pain
+
+          // Set 5: Bright & Airy to Deeper Cool Tones (Very Light Purple to Icy Blue to Deep Purple)
+          [0xe5eaf5, 0xa0d2eb, 0x8458B3]  // Freeze Purple -> Ice Cold -> Purple Pain
         ]
       }
 
