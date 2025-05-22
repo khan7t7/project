@@ -39,7 +39,6 @@ const skillCategories = [
     ]
   },
   {
-    {
   name: "Web Development",
   skills: [
     { name: "RESTful APIs", level: 91, color: "from-[hsl(var(--gradient-1))] to-[hsl(var(--gradient-2))]" },
