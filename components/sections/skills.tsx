@@ -87,7 +87,7 @@ const skillCategories = [
 export function Skills() {
   return (
     <MotionSection className="py-20 px-4 relative overflow-hidden" delay={0.5}>
-      <div className="absolute inset-0 tech-background" />
+      <div className="absolute inset-0" />
       <div className="max-w-4xl mx-auto relative">
         <h2 className="text-4xl md:text-5xl font-extrabold mb-8 text-center gradient-text bubble-text">Skills</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-20">
