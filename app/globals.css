@@ -4,30 +4,42 @@
 
 @layer base {
   :root {
-    --background: 222 84% 4.9% / 0;
-    --foreground: 210 40% 98%;
-    --card: 222 84% 4.9% / 0.1;
-    --card-foreground: 210 40% 98%;
-    --popover: 222 84% 4.9% / 0.1;
-    --popover-foreground: 210 40% 98%;
-    --primary: 217.2 91.2% 59.8%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-    --secondary: 217.2 32.6% 17.5% / 0.1;
-    --secondary-foreground: 210 40% 98%;
-    --muted: 217.2 32.6% 17.5% / 0.1;
-    --muted-foreground: 215 20.2% 65.1%;
-    --accent: 217.2 32.6% 17.5% / 0.1;
-    --accent-foreground: 210 40% 98%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 217.2 32.6% 17.5% / 0.2;
-    --input: 217.2 32.6% 17.5% / 0.1;
-    --ring: 224.3 76.3% 48%;
-    --gradient-1: 217.2 91.2% 59.8%;
-    --gradient-2: 263.4 70% 50.4%;
-    --gradient-3: 316.6 70% 50.4%;
+    /* Define a base dark background color */
+    --page-background: 274 40% 12%; /* Very Dark Purple - used for html background */
+
+    --foreground: 222.9 53.3% 92.9%;   /* Freeze Purple - Main text color */
+    --card: 274 35% 22% / 0.85;         /* Darker Purple Pain variant, 85% opaque for card background */
+    --card-foreground: 222.9 53.3% 92.9%; /* Freeze Purple - Text on cards */
+    --popover: 274 35% 25% / 0.9;       /* Slightly lighter than card, 90% opaque for popover BG */
+    --popover-foreground: 222.9 53.3% 92.9%; /* Freeze Purple - Text on popovers */
+
+    --primary: 259.7 70.8% 84.9%;     /* Medium Purple - Main interactive elements (buttons, links) */
+    --primary-foreground: 274 35% 15%;  /* Very Dark Purple - Text on primary elements */
+
+    --secondary: 344.1 18.1% 56.9% / 0.25; /* Heavy Purple, 25% opacity - Subtle secondary background */
+    --secondary-foreground: 222.9 53.3% 92.9%; /* Freeze Purple - Text for secondary elements */
+
+    --muted: 200 68% 77.5% / 0.15;      /* Ice Cold, 15% opacity - Very subtle muted background */
+    --muted-foreground: 200 65% 85%;   /* Lighter Ice Cold variant - Muted text color */
+
+    --accent: 274.3 36.9% 52.4% / 0.2;  /* Purple Pain, 20% opacity - Subtle accent background */
+    --accent-foreground: 222.9 53.3% 92.9%; /* Freeze Purple - Text for accent elements */
+
+    --destructive: 344 55% 50%;        /* Adjusted Heavy Purple (more saturated/distinct) for destructive actions */
+    --destructive-foreground: 222.9 53.3% 92.9%; /* Freeze Purple - Text on destructive elements */
+
+    --border: 259.7 70.8% 84.9% / 0.25; /* Medium Purple, 25% opacity - for borders */
+    --input: 274 30% 20% / 0.5;         /* Dark Purple variant, 50% opacity - for input backgrounds */
+    --ring: 200 68% 77.5%;            /* Ice Cold - for focus rings, bright and clear */
+
+    --gradient-1: 200 68% 77.5%;       /* Ice Cold */
+    --gradient-2: 259.7 70.8% 84.9%;   /* Medium Purple */
+    --gradient-3: 274.3 36.9% 52.4%;   /* Purple Pain */
+
     --radius: 0.75rem;
-    cursor: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3.16667 1.66667L17.5 9.16667L3.16667 16.6667L3.16667 1.66667Z' stroke='white' stroke-width='1.2'/%3E%3C/svg%3E") 3 3, auto;
+
+    /* Updated Cursors */
+    cursor: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3.16667 1.66667L17.5 9.16667L3.16667 16.6667L3.16667 1.66667Z' stroke='%23e5eaf5' stroke-width='1.2'/%3E%3C/svg%3E") 3 3, auto; /* Stroke: Freeze Purple */
   }
 
   /* Force dark theme and text colors */
@@ -35,15 +47,15 @@
     color-scheme: dark;
   }
 
-  /* Force light text on dark background */
+  /* Force page background and base text color */
   html {
-    background-color: rgb(0, 0, 0);
-    color: rgb(248, 250, 252);
+    background-color: hsl(var(--page-background)); /* Very Dark Purple */
+    color: hsl(var(--foreground)); /* Freeze Purple */
   }
 
   body {
-    color: rgb(248, 250, 252) !important;
-    background-color: transparent;
+    color: hsl(var(--foreground)) !important; /* Freeze Purple */
+    background-color: transparent; /* Body background is transparent, html provides the base */
   }
 
   /* Force text colors for all text elements */
@@ -137,8 +149,8 @@
 
 .grid-background {
   background-image:
-    linear-gradient(to right, hsl(var(--primary) / 0.1) 1px, transparent 1px),
-    linear-gradient(to bottom, hsl(var(--primary) / 0.1) 1px, transparent 1px);
+    linear-gradient(to right, hsl(var(--primary) / 0.07) 1px, transparent 1px), /* Using primary with low opacity for grid lines */
+    linear-gradient(to bottom, hsl(var(--primary) / 0.07) 1px, transparent 1px);
   background-size: 50px 50px;
   background-position: center center;
   transform-origin: center;
@@ -191,26 +203,26 @@
 }
 
 .glass-effect {
-  background: rgba(255, 255, 255, 0.03);
+  background: hsl(var(--foreground) / 0.03); /* Freeze Purple, very transparent */
   -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  border: 1px solid hsl(var(--foreground) / 0.05); /* Freeze Purple, very transparent border */
   border-radius: 1rem;
 }
 
-/* Apply to your cards and sections */
+/* Apply to your cards and sections - example, use specific card styles if needed */
 .your-card {
-  background: rgba(255, 255, 255, 0.03);
-  -webkit-backdrop-filter: blur(8px);
+  background: hsl(var(--card)); /* Uses the themed card background */
+  -webkit-backdrop-filter: blur(8px); /* Keep blur if desired, ensure card bg has transparency */
   backdrop-filter: blur(8px);
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  border: 1px solid hsl(var(--border)); /* Uses themed border */
   border-radius: 1rem;
 }
 
 /* Add a new class for content sections */
 .content-section {
   position: relative;
-  background: hsl(var(--background) / 0.85);
+  background: hsl(var(--page-background) / 0.85); /* Slightly transparent version of the main page background */
   -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
   border: 1px solid hsl(var(--border));
@@ -238,7 +250,7 @@
   position: absolute;
   inset: -10px;
   background: radial-gradient(circle at 50% 50%,
-    hsl(var(--gradient-1) / 0.3),
+    hsl(var(--gradient-1) / 0.3), /* Using gradient color for bubble */
     transparent 70%);
   border-radius: inherit;
   z-index: -1;
@@ -324,10 +336,10 @@
 }
 
 .content-box {
-  background: rgba(0, 0, 0, 0.75);
+  background: hsl(var(--card) / 0.9); /* Use card color with slight transparency */
   -webkit-backdrop-filter: blur(12px);
   backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid hsl(var(--border)); /* Themed border */
   border-radius: var(--radius);
   padding: 1.5rem;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
@@ -369,13 +381,8 @@
 
 /* For Firefox */
 * {
-  /* Firefox scrollbar styles */
   scrollbar-width: thin;
-
-  scrollbar-color: hsl(var(--gradient-2)) transparent;
-
-  /* Webkit scrollbar styles are handled by ::-webkit-scrollbar above */
-  /* Other browsers will fall back to default scrollbar appearance */
+  scrollbar-color: hsl(var(--gradient-2)) transparent; /* Gradient-2 for thumb, transparent track */
 }
 
 /* Remove the corner indicators */
@@ -384,10 +391,7 @@ body::after {
   display: none;
 }
 
-/* Custom Cursor Styles */
-:root {
-  cursor: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3.16667 1.66667L17.5 9.16667L3.16667 16.6667L3.16667 1.66667Z' stroke='white' stroke-width='1.2'/%3E%3C/svg%3E") 3 3, auto;
-}
+/* Custom Cursor Styles - Default cursor already updated in :root */
 
 /* Pointer cursor for clickable elements */
 a, button,
@@ -395,7 +399,8 @@ a, button,
 [type="button"],
 [type="submit"],
 [type="reset"] {
-  cursor: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3.16667 1.66667L17.5 9.16667L3.16667 16.6667L3.16667 1.66667Z' fill='%236495ED' stroke='white' stroke-width='1.2'/%3E%3C/svg%3E") 3 3, pointer;
+  /* Fill: Medium Purple, Stroke: Freeze Purple */
+  cursor: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3.16667 1.66667L17.5 9.16667L3.16667 16.6667L3.16667 1.66667Z' fill='%23d0bdf4' stroke='%23e5eaf5' stroke-width='1.2'/%3E%3C/svg%3E") 3 3, pointer;
 }
 
 /* Hover cursor */
@@ -404,7 +409,8 @@ a:hover, button:hover,
 input[type="button"]:hover,
 input[type="submit"]:hover,
 input[type="reset"]:hover {
-  cursor: url("data:image/svg+xml,%3Csvg width='28' height='28' viewBox='0 0 28 28' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3.16667 1.66667L17.5 9.16667L3.16667 16.6667L3.16667 1.66667Z' fill='%2361DAFB' stroke='white' stroke-width='1.2'/%3E%3C/svg%3E") 3 3, pointer;
+  /* Fill: Ice Cold, Stroke: Freeze Purple */
+  cursor: url("data:image/svg+xml,%3Csvg width='28' height='28' viewBox='0 0 28 28' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3.16667 1.66667L17.5 9.16667L3.16667 16.6667L3.16667 1.66667Z' fill='%23a0d2eb' stroke='%23e5eaf5' stroke-width='1.2'/%3E%3C/svg%3E") 3 3, pointer;
 }
 
 /* Replace the existing cursor trail styles with these */
@@ -413,13 +419,12 @@ input[type="reset"]:hover {
   position: fixed;
   width: 8px;
   height: 8px;
-  background: hsl(var(--gradient-1));
+  background: hsl(var(--gradient-1)); /* Ice Cold */
   border-radius: 50%;
   z-index: 9999;
-  mix-blend-mode: screen;
+  mix-blend-mode: screen; /* screen or lighten can look good on dark backgrounds */
   filter: blur(2px);
   animation: flameCore 0.6s ease-out infinite;
-
 }
 
 .cursor-trail::before,
@@ -436,14 +441,14 @@ input[type="reset"]:hover {
 .cursor-trail::before {
   width: 20px;
   height: 20px;
-  background: hsl(var(--gradient-2));
+  background: hsl(var(--gradient-2)); /* Medium Purple */
   filter: blur(4px);
 }
 
 .cursor-trail::after {
   width: 30px;
   height: 30px;
-  background: hsl(var(--gradient-3));
+  background: hsl(var(--gradient-3)); /* Purple Pain */
   filter: blur(8px);
   opacity: 0.5;
 }
@@ -493,7 +498,7 @@ button:hover ~ .cursor-trail::after {
 /* Add these styles */
 .hero-text {
   text-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
-  -webkit-backdrop-filter: blur(0px);
+  -webkit-backdrop-filter: blur(0px); /* Can adjust if a slight blur is desired behind hero text */
   backdrop-filter: blur(0px);
   position: relative;
   z-index: 10;
@@ -505,7 +510,7 @@ button:hover ~ .cursor-trail::after {
   inset: -1rem;
   background: radial-gradient(
     circle at center,
-    hsl(var(--background) / 0.7),
+    hsl(var(--page-background) / 0.7), /* Using page background with some opacity */
     transparent
   );
   z-index: -1;
@@ -522,9 +527,9 @@ button:hover ~ .cursor-trail::after {
   z-index: 20;
 }
 
-/* Add a subtle text shadow to improve readability */
-.text-foreground {
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+/* Add a subtle text shadow to improve readability on varied backgrounds */
+.text-foreground { /* Assuming this class is applied to text using --foreground */
+  text-shadow: 0 1px 3px hsl(var(--page-background) / 0.5); /* Shadow using dark page bg */
 }
 
 /* Ensure background stays behind */
