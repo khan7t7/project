@@ -7,6 +7,20 @@ import { BriefcaseIcon } from "lucide-react"
 import { useEffect } from "react"
 
 const experiences = [
+   {
+    title: "ERP Manager",
+    company: "Radiant Medical Pvt Ltd",
+    location: "Lahore",
+    period: "Oct 2025 - Present",
+    points: [
+      "Created custom modifications using the Frappe Framework (server-side Python hooks, client-side JavaScript, and DocType) to meet evolving business requirements without core code overrides",
+      "Conducted staff training on ERP features and best practices; improved system adoption",
+      "Monitored performance and resolved critical technical issues with high SLA compliance",
+      "Led ERP upgrades, enhancing UI/UX and reporting capabilities",
+      "Designed data security and disaster recovery protocols",
+      "Developed KPI dashboards and operational reports from ERP data"
+    ]
+  },
   {
     title: "Full-Stack Engineer | ERPNext Specialist",
     company: "Al Ansari Group LLC",
