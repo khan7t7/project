@@ -25,7 +25,7 @@ const experiences = [
     title: "Full-Stack Engineer | ERPNext Specialist",
     company: "Al Ansari Group LLC",
     location: "Oman",
-    period: "Feb 2023 - Present",
+    period: "Feb 2023 - Aug 2025",
     points: [
       "Led Erpnext development and AI integration, automating 50% of manual processes",
       "Integrated AI solutions to enhance system functionality and optimize organizational efficiency",
