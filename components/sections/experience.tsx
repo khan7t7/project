@@ -22,16 +22,18 @@ const experiences = [
     ]
   },
   {
-    title: "Full-Stack Engineer | ERPNext Specialist",
+    title: "ERP Specialist | Full-Stack Engineer",
     company: "Al Ansari Group LLC",
     location: "Oman",
     period: "Feb 2023 - Aug 2025",
     points: [
-      "Led Erpnext development and AI integration, automating 50% of manual processes",
-      "Integrated AI solutions to enhance system functionality and optimize organizational efficiency",
-      "Migrated 10M+ records from Orion ERP to Erpnext, ensuring 99.9% data integrity",
-      "Integrated Erpnext with Power BI, reducing data retrieval time by 70%",
-      "Conducted monthly system audits, improving Erpnext performance by 25%"
+"Developed a custom Frappe app to extend ERPNext functionality enabling scalable, upgrade safe customizations aligned with business workflows.",
+"Built 20+ RESTful APIs (Python) and integrated n8n for workflow automation, reducing manual tasks.",
+"Led migration of 10M+ records from Oracle EBS to ERPNext with 99.9% data integrity and zero downtime cutover.",
+"Collaborated with Oracle EBS teams on HR/payroll mapping gained functional insight into EBS tables and statutory reporting logic.",
+"Integrated ERPNext with Power BI and built real-time dashboards/KPI reports, cutting data retrieval time and enabling data-driven decisions.",
+"Owned end-to-end Git/GitHub workflow: managed company repository, enforced CI/CD (GitHub Actions), and ensured code quality.",
+"Resolved 100+ techno-functional issues (from SQL/performance bottlenecks to business logic gaps) as tier-3 support; trained 1500+ users."
     ]
   },
   {
