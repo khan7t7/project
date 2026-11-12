@@ -13,8 +13,8 @@ export function About() {
         {/* Main introduction card */}
         <Card className="mb-8 backdrop-blur-sm bg-background/70">
           <CardContent className="p-6">
-            <p className="text-lg leading-relaxed text-foreground/80">
-              Full-Stack Engineer bridging tech and business as an ERP Techno-Functional Specialist. Passionate about exploring the innovative potential of Generative AI.
+            <p className="text-lg leading-relaxed text-foreground/85">
+              Senior ERPNext Architect & Frappe Developer with strong techno-functional expertise in end-to-end ERP implementations, bespoke customization, and complex system integrations. Leverages enterprise-grade perspective from hands-on work with legacy systems including Oracle development environments, PL/SQL, and Oracle EBS to bridge the gap between complex business requirements and modern technical execution. Proven track record of modernizing enterprise operations by automating workflows with n8n and AI-driven LLM agents, delivering scalable, efficient, and future-proof ERP solutions.
             </p>
           </CardContent>
         </Card>
@@ -24,10 +24,20 @@ export function About() {
           <Card className="hover:shadow-lg transition-shadow backdrop-blur-sm bg-background/70">
             <CardContent className="p-6 space-y-4">
               <div className="flex items-center space-x-3">
-                <CodeIcon className="w-6 h-6 text-primary" />
-                <h3 className="text-xl font-semibold">Technical Expertise</h3>
+                <BuildingIcon className="w-6 h-6 text-primary" />
+                <h3 className="text-xl font-semibold">ERPNext & Frappe Architecture</h3>
               </div>
-              <p className="text-foreground/70">Python, JavaScript, C++, and modern AI frameworks including TensorFlow, PyTorch, and Hugging Face.</p>
+              <p className="text-foreground/70">End-to-end implementation life cycles, custom Frappe app development, DocTypes, server-side Python hooks, client-side JS, and Retail/POS inventory synchronization without core code overrides.</p>
+            </CardContent>
+          </Card>
+
+          <Card className="hover:shadow-lg transition-shadow backdrop-blur-sm bg-background/70">
+            <CardContent className="p-6 space-y-4">
+              <div className="flex items-center space-x-3">
+                <CodeIcon className="w-6 h-6 text-primary" />
+                <h3 className="text-xl font-semibold">Legacy Systems & Oracle Migration</h3>
+              </div>
+              <p className="text-foreground/70">Deep experience with Oracle DB (10g–19c), PL/SQL extraction scripts, Oracle EBS data migration to ERPNext with high integrity and zero downtime, plus Oracle Forms/Reports interfacing.</p>
             </CardContent>
           </Card>
 
@@ -35,19 +45,9 @@ export function About() {
             <CardContent className="p-6 space-y-4">
               <div className="flex items-center space-x-3">
                 <BrainIcon className="w-6 h-6 text-primary" />
-                <h3 className="text-xl font-semibold">AI Solutions</h3>
+                <h3 className="text-xl font-semibold">AI Agents & Workflow Automation</h3>
               </div>
-              <p className="text-foreground/70">Specialized in designing and deploying generative AI models, RESTful APIs, and cloud-based services.</p>
-            </CardContent>
-          </Card>
-
-          <Card className="hover:shadow-lg transition-shadow backdrop-blur-sm bg-background/70">
-            <CardContent className="p-6 space-y-4">
-              <div className="flex items-center space-x-3">
-                <BuildingIcon className="w-6 h-6 text-primary" />
-                <h3 className="text-xl font-semibold">Enterprise Integration</h3>
-              </div>
-              <p className="text-foreground/70">Strong background in ERP systems, particularly ERPNext, facilitating seamless AI integration into business processes.</p>
+              <p className="text-foreground/70">Intelligent automation with n8n, AI-driven LLM agents for unstructured data processing, RAG architectures, prompt engineering, and real-time business intelligence dashboards via Power BI.</p>
             </CardContent>
           </Card>
 
@@ -55,9 +55,9 @@ export function About() {
             <CardContent className="p-6 space-y-4">
               <div className="flex items-center space-x-3">
                 <TargetIcon className="w-6 h-6 text-primary" />
-                <h3 className="text-xl font-semibold">Core Values</h3>
+                <h3 className="text-xl font-semibold">Full-Stack & DevOps Engineering</h3>
               </div>
-              <p className="text-foreground/70">Committed to building scalable, efficient, and ethically responsible AI applications that drive growth.</p>
+              <p className="text-foreground/70">Modern web architecture with Python (FastAPI, Flask, Django), TypeScript, Next.js, Docker containerization, Linux server administration, and automated GitHub Actions CI/CD pipelines.</p>
             </CardContent>
           </Card>
         </div>

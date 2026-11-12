@@ -7,28 +7,28 @@ import { Award } from "lucide-react"
 
 const certifications = [
   {
-    name: "Career Essentials in Generative AI",
+    name: "ERPNext Developer",
+    issuer: "Upeosoft"
+  },
+  {
+    name: "Generative AI",
     issuer: "Microsoft & LinkedIn"
   },
   {
-    name: "Career Essentials in GitHub Professional Certificate",
-    issuer: "GitHub & LinkedIn"
+    name: "DevOps Professional",
+    issuer: "Microsoft"
   },
   {
-    name: "DevOps Professional Certificate",
-    issuer: "Microsoft & LinkedIn"
+    name: "GitHub Professional",
+    issuer: "GitHub"
   },
   {
     name: "Python for Data Science",
-    issuer: "Cognitive Class"
+    issuer: "IBM"
   },
   {
-    name: "Career Essentials In Business Analysis",
-    issuer: "PagerDuty and LinkedIn"
-  },
-  {
-    name: "The Complete Frappe Framework & Erpnext Developer",
-    issuer: "Upeosoft"
+    name: "Business Analysis",
+    issuer: "PagerDuty"
   }
 ]
 

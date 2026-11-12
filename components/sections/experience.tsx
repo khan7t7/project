@@ -7,54 +7,61 @@ import { BriefcaseIcon } from "lucide-react"
 import { useEffect } from "react"
 
 const experiences = [
-   {
+  {
+    title: "Senior Implementation Executive",
+    company: "LucrumX",
+    location: "Lahore, Pakistan",
+    period: "Feb 2026 – May 2026",
+    points: [
+      "Leading end-to-end ERP implementation life cycles, specializing in Retail systems and POS modules to streamline front-end operations and inventory synchronization.",
+      "Orchestrating complex data migration strategies, schema mapping, and system integrations to ensure seamless transitions from legacy platforms to modern ERP environments.",
+      "Configuring business-specific workflows in ERPNext, focusing on requirement gathering and alignment of retail business processes with automated back-office systems.",
+      "Providing high-level technical consultancy on Frappe/ERPNext architecture to optimize enterprise workflows and enhance system scalability."
+    ]
+  },
+  {
     title: "ERP Manager",
-    company: "Radiant Medical Pvt Ltd",
-    location: "Lahore",
-    period: "Oct 2025 - Present",
+    company: "Radiant Medical (Pvt) Ltd.",
+    location: "Lahore, Pakistan (On-site: Oct 2025 – Jan 2026 | Remote: Feb 2026 – Mar 2026)",
+    period: "Oct 2025 – Mar 2026",
     points: [
-      "Created custom modifications using the Frappe Framework (server-side Python hooks, client-side JavaScript, and DocType) to meet evolving business requirements without core code overrides",
-      "Conducted staff training on ERP features and best practices; improved system adoption",
-      "Monitored performance and resolved critical technical issues with high SLA compliance",
-      "Led ERP upgrades, enhancing UI/UX and reporting capabilities",
-      "Designed data security and disaster recovery protocols",
-      "Developed KPI dashboards and operational reports from ERP data"
+      "Created custom modifications using the Frappe Framework (server-side Python hooks, client-side JavaScript, and DocTypes) without core code overrides.",
+      "Engineered intelligent automation workflows using n8n to synchronize data between disparate database systems, integrating LLM-based agents to categorize unstructured inputs.",
+      "Conducted staff training on ERP features and best practices; significantly improved system adoption rates.",
+      "Led ERP upgrades and database optimizations, enhancing UI/UX and reporting capabilities while maintaining high SLA compliance for production support."
     ]
   },
   {
-    title: "ERP Specialist | Full-Stack Engineer",
+    title: "ERP Specialist & Full-Stack Engineer",
     company: "Al Ansari Group LLC",
-    location: "Oman",
-    period: "Feb 2023 - Aug 2025",
+    location: "Muscat, Oman",
+    period: "Feb 2023 – Aug 2025",
     points: [
-"Developed a custom Frappe app to extend ERPNext functionality enabling scalable, upgrade safe customizations aligned with business workflows.",
-"Built 20+ RESTful APIs (Python) and integrated n8n for workflow automation, reducing manual tasks.",
-"Led migration of 10M+ records from Oracle EBS to ERPNext with 99.9% data integrity and zero downtime cutover.",
-"Collaborated with Oracle EBS teams on HR/payroll mapping gained functional insight into EBS tables and statutory reporting logic.",
-"Integrated ERPNext with Power BI and built real-time dashboards/KPI reports, cutting data retrieval time and enabling data-driven decisions.",
-"Owned end-to-end Git/GitHub workflow: managed company repository, enforced CI/CD (GitHub Actions), and ensured code quality.",
-"Resolved 100+ techno-functional issues (from SQL/performance bottlenecks to business logic gaps) as tier-3 support; trained 1500+ users."
+      "Developed a custom Frappe app to extend ERPNext functionality, enabling scalable, upgrade-safe customizations aligned with business workflows.",
+      "Built custom RESTful APIs and integrated n8n for complex workflow automation, utilizing AI nodes to eliminate repetitive manual tasks.",
+      "Led the end-to-end data migration from Oracle EBS (10g/11g environment) to ERPNext, writing custom SQL/PLSQL extraction scripts to ensure high data integrity and a zero-downtime cut-over.",
+      "Maintained cross-system interfaces between legacy components (Oracle Forms/Reports) and new web dashboards to guarantee uninterrupted business reporting.",
+      "Integrated ERPNext with Power BI and engineered real-time dashboards to streamline data retrieval and support data-driven business decisions.",
+      "Owned the end-to-end Git/GitHub workflow, managing the enterprise repository and enforcing automated CI/CD pipelines via GitHub Actions."
     ]
   },
   {
-    title: "Python Developer Intern",
+    title: "Python Developer",
     company: "Content Arcade Ltd",
-    location: "Pakistan",
-    period: "Nov 2022 - Jan 2023",
+    location: "Faisalabad, Pakistan",
+    period: "Oct 2022 – Jan 2023",
     points: [
-      "Built dynamic front-end components with React & Next.js, improving UI responsiveness",
-      "Developed APIs, Databases, and Websites"
+      "Developed scalable APIs using Flask and FastAPI, handled Ajax workflows, and managed PostgreSQL/Redis relational databases.",
+      "Built dynamic UI components with React & Next.js for improved system responsiveness."
     ]
   },
   {
     title: "SEO Specialist",
     company: "Software Bench Inc",
-    location: "Pakistan",
-    period: "Oct 2020 - Oct 2021",
+    location: "Faisalabad, Pakistan",
+    period: "Oct 2020 – Oct 2021",
     points: [
-      "Successfully led SEO strategies for over eight websites, Improved rankings & organic traffic",
-      "Executed email marketing and social media management initiatives",
-      "Created content writing strategies to enhance brand visibility"
+      "Led SEO for 8+ client websites; boosted organic traffic via technical SEO, content strategy, and backlinking."
     ]
   }
 ]

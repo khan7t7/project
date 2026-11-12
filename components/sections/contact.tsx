@@ -3,31 +3,43 @@
 import { Card } from "@/components/ui/card"
 import { MotionSection } from "@/components/ui/motion-section"
 import { motion } from "framer-motion"
-import { Languages, Mail, MapPin, Phone } from "lucide-react"
+import { Globe, Languages, Link, Mail, MapPin, Phone } from "lucide-react"
 import { useState } from "react"
 
 const contactInfo = [
   {
     icon: Mail,
     label: "Email",
-    value: "mustafak.direct@gmail.com",
-    link: "mailto:mustafak.direct@gmail.com"
+    value: "mmustafa.erp@gmail.com",
+    link: "mailto:mmustafa.erp@gmail.com"
   },
   {
     icon: Phone,
     label: "Phone",
-    value: "(+968) 79818196",
-    link: "tel:+96879818196"
+    value: "+92 317 7791717",
+    link: "tel:+923177791717"
   },
   {
     icon: MapPin,
     label: "Location",
-    value: "Muscat, Oman"
+    value: "Faisalabad, Pakistan"
+  },
+  {
+    icon: Link,
+    label: "LinkedIn",
+    value: "linkedin.com/in/mustafaERP",
+    link: "https://linkedin.com/in/mustafaERP"
+  },
+  {
+    icon: Globe,
+    label: "Portfolio",
+    value: "itsmustafa.vercel.app",
+    link: "https://itsmustafa.vercel.app"
   },
   {
     icon: Languages,
     label: "Languages",
-    value: "English, Urdu, Arabic, Punjabi, Pashto, Hindi"
+    value: "English (Proficient), Urdu, Punjabi, Pashto, Hindi (Native), Arabic (Intermediate)"
   }
 ]
 

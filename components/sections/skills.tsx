@@ -6,83 +6,85 @@ import { motion } from "framer-motion"
 
 const skillCategories = [
   {
-    name: "AI & Machine Learning",
+    name: "ERP & Integration",
     skills: [
-      { name: "Generative AI", level: 90, color: "from-[hsl(var(--gradient-1))] to-[hsl(var(--gradient-2))]" },
-      { name: "TensorFlow", level: 85, color: "from-[hsl(var(--gradient-2))] to-[hsl(var(--gradient-3))]" },
-      { name: "PyTorch", level: 88, color: "from-[hsl(var(--gradient-3))] to-[hsl(var(--gradient-1))]" },
-      { name: "Machine Learning", level: 92, color: "from-[hsl(var(--gradient-1))] to-[hsl(var(--gradient-2))]" },
-      { name: "Hugging Face", level: 86, color: "from-[hsl(var(--gradient-2))] to-[hsl(var(--gradient-3))]" },
-      { name: "Stable Diffusion", level: 84, color: "from-[hsl(var(--gradient-3))] to-[hsl(var(--gradient-1))]" },
-      { name: "DALL-E", level: 82, color: "from-[hsl(var(--gradient-1))] to-[hsl(var(--gradient-2))]" }
+      { name: "ERPNext (Core Focus)", level: 96, color: "from-[hsl(var(--gradient-1))] to-[hsl(var(--gradient-2))]" },
+      { name: "Frappe Framework", level: 95, color: "from-[hsl(var(--gradient-2))] to-[hsl(var(--gradient-3))]" },
+      { name: "n8n Automation", level: 92, color: "from-[hsl(var(--gradient-3))] to-[hsl(var(--gradient-1))]" },
+      { name: "RESTful APIs", level: 93, color: "from-[hsl(var(--gradient-1))] to-[hsl(var(--gradient-2))]" },
+      { name: "Legacy System Interfaces", level: 90, color: "from-[hsl(var(--gradient-2))] to-[hsl(var(--gradient-3))]" },
+      { name: "Odoo (Functional)", level: 85, color: "from-[hsl(var(--gradient-3))] to-[hsl(var(--gradient-1))]" }
     ]
   },
   {
-    name: "Programming Languages",
+    name: "Business Modules",
     skills: [
-      { name: "Python", level: 95, color: "from-[hsl(var(--gradient-1))] to-[hsl(var(--gradient-2))]" },
-      { name: "JavaScript", level: 92, color: "from-[hsl(var(--gradient-2))] to-[hsl(var(--gradient-3))]" },
-      { name: "Java", level: 90, color: "from-[hsl(var(--gradient-3))] to-[hsl(var(--gradient-1))]" },
-      { name: "C++", level: 85, color: "from-[hsl(var(--gradient-1))] to-[hsl(var(--gradient-2))]" },
-      { name: "HTML5", level: 90, color: "from-[hsl(var(--gradient-2))] to-[hsl(var(--gradient-3))]" },
-      { name: "CSS3", level: 88, color: "from-[hsl(var(--gradient-3))] to-[hsl(var(--gradient-1))]" }
+      { name: "Retail & POS", level: 95, color: "from-[hsl(var(--gradient-1))] to-[hsl(var(--gradient-2))]" },
+      { name: "Inventory & Stock Management", level: 94, color: "from-[hsl(var(--gradient-2))] to-[hsl(var(--gradient-3))]" },
+      { name: "Buying & Procurement", level: 92, color: "from-[hsl(var(--gradient-3))] to-[hsl(var(--gradient-1))]" },
+      { name: "Selling & CRM", level: 90, color: "from-[hsl(var(--gradient-1))] to-[hsl(var(--gradient-2))]" },
+      { name: "Accounting & Finance", level: 88, color: "from-[hsl(var(--gradient-2))] to-[hsl(var(--gradient-3))]" },
+      { name: "HR & Payroll", level: 90, color: "from-[hsl(var(--gradient-3))] to-[hsl(var(--gradient-1))]" }
     ]
   },
   {
-    name: "Enterprise Solutions",
+    name: "Oracle Stack & Tools",
     skills: [
-      { name: "Spring Boot", level: 92, color: "from-[hsl(var(--gradient-1))] to-[hsl(var(--gradient-2))]" },
-      { name: "ERPNext Development", level: 94, color: "from-[hsl(var(--gradient-2))] to-[hsl(var(--gradient-3))]" },
-      { name: "Frappe Framework", level: 92, color: "from-[hsl(var(--gradient-3))] to-[hsl(var(--gradient-1))]" },
-      { name: "Orion ERP", level: 88, color: "from-[hsl(var(--gradient-1))] to-[hsl(var(--gradient-2))]" },
-      { name: "Enterprise Resource Planning", level: 90, color: "from-[hsl(var(--gradient-2))] to-[hsl(var(--gradient-3))]" }
+      { name: "Oracle DB (10g, 11g, 12c, 19c)", level: 92, color: "from-[hsl(var(--gradient-1))] to-[hsl(var(--gradient-2))]" },
+      { name: "SQL / PLSQL", level: 94, color: "from-[hsl(var(--gradient-2))] to-[hsl(var(--gradient-3))]" },
+      { name: "Oracle Forms & Reports (10g/12c)", level: 88, color: "from-[hsl(var(--gradient-3))] to-[hsl(var(--gradient-1))]" },
+      { name: "Oracle EBS", level: 90, color: "from-[hsl(var(--gradient-1))] to-[hsl(var(--gradient-2))]" },
+      { name: "Oracle APEX (Familiarity)", level: 82, color: "from-[hsl(var(--gradient-2))] to-[hsl(var(--gradient-3))]" }
     ]
   },
   {
-  name: "Web Development",
-  skills: [
-    { name: "RESTful APIs", level: 91, color: "from-[hsl(var(--gradient-1))] to-[hsl(var(--gradient-2))]" },
-    { name: "FAST APIs", level: 88, color: "from-[hsl(var(--gradient-2))] to-[hsl(var(--gradient-3))]" },
-    { name: "Apache Tomcat", level: 89, color: "from-[hsl(var(--gradient-3))] to-[hsl(var(--gradient-1))]" },
-    { name: "WordPress", level: 86, color: "from-[hsl(var(--gradient-1))] to-[hsl(var(--gradient-2))]" },
-    { name: "CodeIgniter", level: 85, color: "from-[hsl(var(--gradient-2))] to-[hsl(var(--gradient-3))]" },
-    { name: "Bootstrap", level: 89, color: "from-[hsl(var(--gradient-3))] to-[hsl(var(--gradient-1))]" },
-    { name: "React", level: 92, color: "from-[hsl(var(--gradient-1))] to-[hsl(var(--gradient-2))]" },
-    { name: "Next.js", level: 90, color: "from-[hsl(var(--gradient-2))] to-[hsl(var(--gradient-3))]" },
-    { name: "Three.Js", level: 89, color: "from-[hsl(var(--gradient-1))] to-[hsl(var(--gradient-2))]" },
-    { name: "jQuery", level: 87, color: "from-[hsl(var(--gradient-2))] to-[hsl(var(--gradient-3))]" }
-  ]
-},
-  {
-    name: "Database & Infrastructure",
+    name: "AI & Data",
     skills: [
-      { name: "MariaDB", level: 89, color: "from-[hsl(var(--gradient-1))] to-[hsl(var(--gradient-2))]" },
-      { name: "Oracle", level: 86, color: "from-[hsl(var(--gradient-2))] to-[hsl(var(--gradient-3))]" },
-      { name: "PostgreSQL", level: 88, color: "from-[hsl(var(--gradient-3))] to-[hsl(var(--gradient-1))]" },
-      { name: "MySQL", level: 90, color: "from-[hsl(var(--gradient-1))] to-[hsl(var(--gradient-2))]" },
-      { name: "Cloud Computing", level: 87, color: "from-[hsl(var(--gradient-2))] to-[hsl(var(--gradient-3))]" },
-      { name: "IBM Cloud", level: 85, color: "from-[hsl(var(--gradient-3))] to-[hsl(var(--gradient-1))]" }
+      { name: "RAG Agent Architecture", level: 92, color: "from-[hsl(var(--gradient-1))] to-[hsl(var(--gradient-2))]" },
+      { name: "LLM Workflows & Agents", level: 94, color: "from-[hsl(var(--gradient-2))] to-[hsl(var(--gradient-3))]" },
+      { name: "Prompt Engineering", level: 93, color: "from-[hsl(var(--gradient-3))] to-[hsl(var(--gradient-1))]" },
+      { name: "Business Intelligence (Power BI)", level: 90, color: "from-[hsl(var(--gradient-1))] to-[hsl(var(--gradient-2))]" }
     ]
   },
   {
-    name: "DevOps & Tools",
+    name: "Languages",
     skills: [
-      { name: "Docker", level: 91, color: "from-[hsl(var(--gradient-1))] to-[hsl(var(--gradient-2))]" },
-      { name: "Apache Kafka", level: 89, color: "from-[hsl(var(--gradient-2))] to-[hsl(var(--gradient-3))]" },
-      { name: "Git", level: 93, color: "from-[hsl(var(--gradient-3))] to-[hsl(var(--gradient-1))]" },
-      { name: "GitHub", level: 92, color: "from-[hsl(var(--gradient-1))] to-[hsl(var(--gradient-2))]" },
-      { name: "GitHub Actions", level: 88, color: "from-[hsl(var(--gradient-2))] to-[hsl(var(--gradient-3))]" },
-      { name: "Postman API", level: 90, color: "from-[hsl(var(--gradient-3))] to-[hsl(var(--gradient-1))]" },
-      { name: "Network Security", level: 86, color: "from-[hsl(var(--gradient-1))] to-[hsl(var(--gradient-2))]" }
+      { name: "Python (FastAPI, Django, Flask)", level: 95, color: "from-[hsl(var(--gradient-1))] to-[hsl(var(--gradient-2))]" },
+      { name: "JavaScript / TypeScript (Node.js, React)", level: 92, color: "from-[hsl(var(--gradient-2))] to-[hsl(var(--gradient-3))]" },
+      { name: "SQL / PLSQL", level: 94, color: "from-[hsl(var(--gradient-3))] to-[hsl(var(--gradient-1))]" },
+      { name: "PHP", level: 85, color: "from-[hsl(var(--gradient-1))] to-[hsl(var(--gradient-2))]" },
+      { name: "C++", level: 84, color: "from-[hsl(var(--gradient-2))] to-[hsl(var(--gradient-3))]" }
     ]
   },
   {
-    name: "Digital Marketing & Content",
+    name: "Web Development",
     skills: [
-      { name: "SEO Optimization", level: 88, color: "from-[hsl(var(--gradient-1))] to-[hsl(var(--gradient-2))]" },
-      { name: "Email Marketing", level: 85, color: "from-[hsl(var(--gradient-2))] to-[hsl(var(--gradient-3))]" },
-      { name: "Social Media Management", level: 87, color: "from-[hsl(var(--gradient-3))] to-[hsl(var(--gradient-1))]" },
-      { name: "Content Writing", level: 89, color: "from-[hsl(var(--gradient-1))] to-[hsl(var(--gradient-2))]" }
+      { name: "Full-Stack Architecture", level: 94, color: "from-[hsl(var(--gradient-1))] to-[hsl(var(--gradient-2))]" },
+      { name: "RESTful API Design", level: 95, color: "from-[hsl(var(--gradient-2))] to-[hsl(var(--gradient-3))]" },
+      { name: "Next.js & Remix.js", level: 91, color: "from-[hsl(var(--gradient-3))] to-[hsl(var(--gradient-1))]" },
+      { name: "Three.js (3D Graphics)", level: 86, color: "from-[hsl(var(--gradient-1))] to-[hsl(var(--gradient-2))]" },
+      { name: "Single Page Apps (SPA) & Responsive UI/UX", level: 92, color: "from-[hsl(var(--gradient-2))] to-[hsl(var(--gradient-3))]" }
+    ]
+  },
+  {
+    name: "Cloud & DevOps",
+    skills: [
+      { name: "Linux Server Administration", level: 91, color: "from-[hsl(var(--gradient-1))] to-[hsl(var(--gradient-2))]" },
+      { name: "Docker Containerization", level: 90, color: "from-[hsl(var(--gradient-2))] to-[hsl(var(--gradient-3))]" },
+      { name: "GitHub Actions & CI/CD", level: 92, color: "from-[hsl(var(--gradient-3))] to-[hsl(var(--gradient-1))]" },
+      { name: "AWS", level: 86, color: "from-[hsl(var(--gradient-1))] to-[hsl(var(--gradient-2))]" },
+      { name: "Production Support & SLA Compliance", level: 93, color: "from-[hsl(var(--gradient-2))] to-[hsl(var(--gradient-3))]" }
+    ]
+  },
+  {
+    name: "Databases",
+    skills: [
+      { name: "MariaDB", level: 93, color: "from-[hsl(var(--gradient-1))] to-[hsl(var(--gradient-2))]" },
+      { name: "PostgreSQL", level: 91, color: "from-[hsl(var(--gradient-2))] to-[hsl(var(--gradient-3))]" },
+      { name: "Oracle DB", level: 92, color: "from-[hsl(var(--gradient-3))] to-[hsl(var(--gradient-1))]" },
+      { name: "Redis", level: 88, color: "from-[hsl(var(--gradient-1))] to-[hsl(var(--gradient-2))]" },
+      { name: "MongoDB", level: 86, color: "from-[hsl(var(--gradient-2))] to-[hsl(var(--gradient-3))]" },
+      { name: "IndexedDB (Browser DB)", level: 85, color: "from-[hsl(var(--gradient-3))] to-[hsl(var(--gradient-1))]" }
     ]
   }
 ]

@@ -2,23 +2,23 @@ export const PersonStructuredData = {
   '@context': 'https://schema.org',
   '@type': 'Person',
   name: 'Mustafa Ahmad',
-  jobTitle: 'Full-Stack Developer',
-  description: 'Expert Full-Stack Developer specializing in ERPNext and AI integration',
-  image: 'https://your-domain.com/DP.jpg',
-  email: 'mustafak.direct@gmail.com',
-  telephone: '+96879818196',
-  url: 'https://your-domain.com',
+  jobTitle: 'Senior ERPNext Architect & Enterprise Solutions Developer',
+  description: 'Senior ERPNext Architect & Frappe Developer specializing in end-to-end ERP implementations, bespoke customization, legacy system migrations, and AI-driven automation.',
+  image: 'https://itsmustafa.vercel.app/DP.jpg',
+  email: 'mmustafa.erp@gmail.com',
+  telephone: '+92 317 7791717',
+  url: 'https://itsmustafa.vercel.app',
   sameAs: [
-    'https://linkedin.com/in/khan777',
-    // Add other social profiles
+    'https://linkedin.com/in/mustafaERP',
+    'https://github.com/khan7t7'
   ],
   address: {
     '@type': 'PostalAddress',
-    addressLocality: 'Muscat',
-    addressCountry: 'Oman'
+    addressLocality: 'Faisalabad',
+    addressCountry: 'Pakistan'
   },
   worksFor: {
     '@type': 'Organization',
-    name: 'Al Ansari Group LLC'
+    name: 'LucrumX'
   }
 }

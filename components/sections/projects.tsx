@@ -8,36 +8,44 @@ import { Brain, Code2, Globe2, LineChart } from "lucide-react";
 
 const projects = [
   {
-    title: "ERPNext Implementation",
-    date: "Oct 2023 - Present",
-    company: "Al-Ansari Group LLC",
-    summary: "Proven track record in implementing and optimizing ERPNext solutions. Led the development of custom modules, system integration, user training, and workflow optimization across key business areas.",
+    title: "ERPNext Retail & Intelligent Automation",
+    date: "Oct 2025 – May 2026",
+    company: "LucrumX & Radiant Medical (Pvt) Ltd.",
+    summary: "Leading end-to-end ERP implementation lifecycles specializing in Retail systems and POS modules. Engineered Frappe customizations (server-side Python hooks, DocTypes) and intelligent n8n workflows with LLM agents to categorize unstructured data.",
     icon: Code2,
-    tags: ["ERPNext", "Python", "JavaScript", "AI/ML"]
+    tags: ["ERPNext", "Frappe", "Retail POS", "LLM Agents", "n8n", "Python"]
   },
   {
-    title: "Weapon Detection Using AI/ML",
-    date: "Jun 2022",
-    company: "The University Of Faisalabad",
-    summary: "Developed an AI/ML-based weapon detection system leveraging OpenCV, YOLOv2, and CNN. This system effectively identifies weapons in real-time and triggers automated alerts.",
+    title: "Oracle EBS to ERPNext Migration & APIs",
+    date: "Feb 2023 – Aug 2025",
+    company: "Al Ansari Group LLC",
+    summary: "Led end-to-end data migration from Oracle EBS (10g/11g) to ERPNext, writing custom SQL/PLSQL scripts ensuring high data integrity and zero-downtime cutover. Built custom RESTful APIs, n8n automations, and real-time Power BI dashboards.",
+    icon: Code2,
+    tags: ["ERPNext", "Frappe", "Oracle EBS", "PL/SQL", "Power BI", "CI/CD"]
+  },
+  {
+    title: "Real-Time Weapon Detection System (AI/ML)",
+    date: "2022",
+    company: "University of Faisalabad (Capstone)",
+    summary: "Developed an AI/ML-based computer vision weapon detection system leveraging OpenCV, YOLOv2, and CNN. The system accurately identifies weapons in real-time video feeds and triggers automated emergency alerts.",
     icon: Brain,
-    tags: ["OpenCV", "YOLO", "CNN", "Python"]
+    tags: ["OpenCV", "YOLO", "CNN", "Python", "Deep Learning"]
   },
   {
-    title: "Online Quiz Application",
-    date: "Jan 2022",
+    title: "Scalable Web Applications & APIs",
+    date: "Oct 2022 – Jan 2023",
     company: "Content Arcade Ltd",
-    summary: "Designed and developed an interactive web-based quiz application using Flask and RESTful APIs, incorporating AI for adaptive question generation.",
+    summary: "Architected and developed high-performance RESTful APIs using Flask and FastAPI, handled Ajax workflows, and integrated React & Next.js frontend interfaces with PostgreSQL and Redis databases.",
     icon: Globe2,
-    tags: ["Flask", "REST API", "AI", "Python"]
+    tags: ["FastAPI", "Flask", "React", "Next.js", "PostgreSQL", "Redis"]
   },
   {
-    title: "SEO Optimization Project",
-    date: "Oct 2021",
+    title: "Enterprise SEO & Digital Strategy",
+    date: "Oct 2020 – Oct 2021",
     company: "Software Bench Inc",
-    summary: "Enhanced the global rankings of 8+ websites using AI-driven SEO strategies, including on-page optimization, technical SEO, and content creation.",
+    summary: "Led comprehensive technical SEO, content strategy, and backlinking campaigns across 8+ client websites, driving substantial organic search traffic and search engine ranking improvements.",
     icon: LineChart,
-    tags: ["SEO", "Analytics", "Content", "AI"]
+    tags: ["Technical SEO", "Analytics", "Content Strategy", "Growth"]
   }
 ]
 

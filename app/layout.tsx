@@ -11,20 +11,23 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://itsmustafa.vercel.app'),
-  title: 'Mustafa Ahmad - Full-Stack Developer & AI Expert',
-  description: 'Expert Full-Stack Developer specializing in ERPNext, System Administration, and AI integration. Based in Muscat, Oman.',
+  title: 'Mustafa Ahmad - Senior ERPNext Architect & Enterprise Solutions Developer',
+  description: 'Senior ERPNext Architect & Frappe Developer specializing in end-to-end ERP implementations, bespoke customization, legacy Oracle migrations, and AI-driven workflow automations. Based in Faisalabad, Pakistan.',
   keywords: [
-    'Full-Stack Developer',
-    'ERPNext Expert',
-    'System Administrator',
-    'AI Integration',
-    'Cloud Computing',
+    'Senior ERPNext Architect',
+    'Enterprise Solutions Developer',
+    'Frappe Developer',
+    'ERPNext',
+    'Oracle EBS Migration',
+    'n8n Automation',
+    'AI LLM Agents',
     'Python Developer',
-    'Web Development',
-    'Muscat',
-    'Oman'
+    'Full-Stack Developer',
+    'PL/SQL',
+    'Faisalabad',
+    'Pakistan'
   ],
-  authors: [{ name: 'Mustafa Ahmad', url: 'https://linkedin.com/in/khan777' }],
+  authors: [{ name: 'Mustafa Ahmad', url: 'https://linkedin.com/in/mustafaERP' }],
   robots: {
     index: true,
     follow: true,
@@ -39,28 +42,28 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://your-domain.com',
-    title: 'Mustafa Ahmad - Full-Stack Developer & AI Expert',
-    description: 'Expert Full-Stack Developer specializing in ERPNext, System Administration, and AI integration.',
+    url: 'https://itsmustafa.vercel.app',
+    title: 'Mustafa Ahmad - Senior ERPNext Architect & Enterprise Solutions Developer',
+    description: 'Senior ERPNext Architect & Frappe Developer specializing in end-to-end ERP implementations, bespoke customization, legacy Oracle migrations, and AI-driven workflow automations.',
     siteName: 'Mustafa Ahmad Portfolio',
     images: [{
-      url: '/og-image.jpg', // Add your OG image
+      url: '/DP.jpg',
       width: 1200,
       height: 630,
-      alt: 'Mustafa Ahmad - Full-Stack Developer'
+      alt: 'Mustafa Ahmad - Senior ERPNext Architect & Enterprise Solutions Developer'
     }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Mustafa Ahmad - Full-Stack Developer & AI Expert',
-    description: 'Expert Full-Stack Developer specializing in ERPNext and AI integration.',
-    images: ['/og-image.jpg'],
+    title: 'Mustafa Ahmad - Senior ERPNext Architect & Enterprise Solutions Developer',
+    description: 'Senior ERPNext Architect & Frappe Developer specializing in ERP implementations and AI automation.',
+    images: ['/DP.jpg'],
   },
   verification: {
-    google: 'your-google-verification-code', // Add your Google verification code
+    google: 'your-google-verification-code',
   },
   alternates: {
-    canonical: 'https://your-domain.com',
+    canonical: 'https://itsmustafa.vercel.app',
   },
 }
 

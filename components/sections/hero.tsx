@@ -2,7 +2,8 @@
 
 import { Button } from "@/components/ui/button"
 import { motion, useScroll, useTransform } from "framer-motion"
-import { LinkedinIcon, MailIcon, PhoneIcon } from "lucide-react"
+import { Link, MailIcon, PhoneIcon } from "lucide-react"
+import Image from "next/image"
 import { useRef, useState } from "react"
 
 export function Hero() {
@@ -56,8 +57,15 @@ export function Hero() {
             <div className="relative w-40 h-40 md:w-48 md:h-48 mx-auto mb-6">
               {/* Glow Effect */}
               <div className="absolute inset-0 rounded-full bg-gradient-to-r from-[hsl(var(--gradient-1))] via-[hsl(var(--gradient-2))] to-[hsl(var(--gradient-3))] animate-pulse-slow opacity-50 blur-2xl" />
-
-
+              <div className="relative w-full h-full rounded-full overflow-hidden border-2 border-primary/50 shadow-2xl">
+                <Image
+                  src="/DP.jpg"
+                  alt="Mustafa Ahmad"
+                  fill
+                  priority
+                  className="object-cover"
+                />
+              </div>
             </div>
           </motion.div>
 
@@ -82,8 +90,11 @@ export function Hero() {
               }}
               className="mb-8"
             >
-              <p className="text-xl md:text-2xl bubble-text">
-                Full-Stack Software Engineer | ERPNext Techno-Functional Specialist | Gen AI Enthusiast
+              <p className="text-xl md:text-2xl font-semibold bubble-text mb-2">
+                Senior ERPNext Architect & Enterprise Solutions Developer
+              </p>
+              <p className="text-sm md:text-base text-muted-foreground">
+                Frappe Framework • Oracle EBS Migration • n8n Workflow Automation • AI-driven LLM Agents
               </p>
             </motion.div>
           </div>
@@ -98,18 +109,28 @@ export function Hero() {
             className="flex gap-4 flex-wrap justify-center"
           >
             <Button variant="outline" size="lg" asChild className="gradient-border">
-              <a href="https://linkedin.com/in/mustafaai" target="_blank" rel="noopener noreferrer">
-                <LinkedinIcon className="mr-2 h-5 w-5" />
+              <a href="https://linkedin.com/in/mustafaERP" target="_blank" rel="noopener noreferrer">
+                <Link className="mr-2 h-5 w-5" />
                 LinkedIn
               </a>
             </Button>
-            <Button variant="outline" size="lg" className="gradient-border">
-              <MailIcon className="mr-2 h-5 w-5" />
-              mustafak.direct@gmail.com
+            <Button variant="outline" size="lg" asChild className="gradient-border">
+              <a href="https://github.com/khan7t7" target="_blank" rel="noopener noreferrer">
+                <Link className="mr-2 h-5 w-5" />
+                GitHub
+              </a>
             </Button>
-            <Button variant="outline" size="lg" className="gradient-border">
-              <PhoneIcon className="mr-2 h-5 w-5" />
-              (+968) 79818196
+            <Button variant="outline" size="lg" asChild className="gradient-border">
+              <a href="mailto:mmustafa.erp@gmail.com">
+                <MailIcon className="mr-2 h-5 w-5" />
+                mmustafa.erp@gmail.com
+              </a>
+            </Button>
+            <Button variant="outline" size="lg" asChild className="gradient-border">
+              <a href="tel:+923177791717">
+                <PhoneIcon className="mr-2 h-5 w-5" />
+                +92 317 7791717
+              </a>
             </Button>
           </motion.div>
         </div>

@@ -1,6 +1,7 @@
 import { About } from "@/components/sections/about";
 import { Certifications } from "@/components/sections/certifications";
 import { Contact } from "@/components/sections/contact";
+import { Education } from "@/components/sections/education";
 import { Experience } from "@/components/sections/experience";
 import { Hero } from "@/components/sections/hero";
 import { Projects } from "@/components/sections/projects";
@@ -39,6 +40,9 @@ export default function Home() {
         <section id="projects">
           <Projects />
         </section>
+        <section id="education">
+          <Education />
+        </section>
         <section id="certifications">
           <Certifications />
         </section>
@@ -56,8 +60,8 @@ export const metadata: Metadata = {
     canonical: '/',
   },
   openGraph: {
-    title: 'Home | Mustafa Ahmad - Full-Stack Developer',
-    description: 'Welcome to my portfolio. Explore my work in full-stack development, ERPNext, and AI integration.',
+    title: 'Mustafa Ahmad - Senior ERPNext Architect & Enterprise Solutions Developer',
+    description: 'Explore my work in ERPNext architecture, enterprise implementations, Oracle EBS legacy migrations, and AI-driven workflow automations.',
   },
 }
 
