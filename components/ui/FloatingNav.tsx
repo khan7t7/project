@@ -6,7 +6,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
-import { Menu } from 'lucide-react'
+import { Menu, Terminal } from 'lucide-react'
 import { useEffect, useState } from 'react'
 
 interface NavItemProps {
@@ -18,10 +18,10 @@ interface NavItemProps {
 const NavItem = ({ active, label, onClick }: NavItemProps) => (
   <button
     onClick={onClick}
-    className={`px-4 py-2 rounded-full transition-all duration-300 ${
+    className={`px-3.5 py-1.5 rounded-full text-xs font-mono transition-all duration-300 relative ${
       active
-        ? 'bg-primary text-primary-foreground'
-        : 'hover:bg-primary/10'
+        ? 'text-cyan-950 font-bold bg-cyan-400 shadow-md shadow-cyan-400/30'
+        : 'text-slate-300 hover:text-white hover:bg-white/[0.08]'
     }`}
   >
     {label}
@@ -33,50 +33,48 @@ const FloatingNav = () => {
 
   const sections = [
     { id: 'hero', label: 'Home' },
-    { id: 'about', label: 'About' },
-    { id: 'experience', label: 'Experience' },
-    { id: 'skills', label: 'Skills' },
-    { id: 'projects', label: 'Projects' },
+    { id: 'about', label: 'Architecture' },
+    { id: 'experience', label: 'Career Log' },
+    { id: 'skills', label: 'Tech Matrix' },
+    { id: 'projects', label: 'Systems' },
     { id: 'education', label: 'Education' },
-    { id: 'certifications', label: 'Certifications' },
-    { id: 'contact', label: 'Contact' }
+    { id: 'certifications', label: 'Credentials' },
+    { id: 'contact', label: 'Terminal' }
   ]
 
   useEffect(() => {
     const options = {
       root: null,
-      rootMargin: '0px',
-      threshold: 0.5,
-    };
+      rootMargin: '-20% 0px -40% 0px',
+      threshold: 0,
+    }
 
     const callback = (entries: IntersectionObserverEntry[]) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          setActiveSection(entry.target.id);
+          setActiveSection(entry.target.id)
         }
-      });
-    };
+      })
+    }
 
-    const observer = new IntersectionObserver(callback, options);
+    const observer = new IntersectionObserver(callback, options)
 
-    // Observe all sections
     sections.forEach(({ id }) => {
-      const element = document.getElementById(id);
+      const element = document.getElementById(id)
       if (element) {
-        observer.observe(element);
+        observer.observe(element)
       }
-    });
+    })
 
-    // Cleanup
     return () => {
       sections.forEach(({ id }) => {
-        const element = document.getElementById(id);
+        const element = document.getElementById(id)
         if (element) {
-          observer.unobserve(element);
+          observer.unobserve(element)
         }
-      });
-    };
-  });
+      })
+    }
+  }, [])
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id)
@@ -89,9 +87,12 @@ const FloatingNav = () => {
   }
 
   return (
-    <div className="fixed bottom-10 left-1/2 -translate-x-1/2 z-50">
-      {/* Desktop Navigation */}
-      <nav className="hidden md:flex backdrop-blur-sm bg-background/30 border border-border/50 rounded-full px-4 py-2 shadow-lg gap-2">
+    <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-40">
+      {/* Desktop HUD Navigation */}
+      <nav className="hidden md:flex items-center backdrop-blur-xl bg-[#090c15]/90 border border-cyan-500/25 rounded-full px-2 py-1.5 shadow-2xl shadow-black/80 gap-1">
+        <div className="flex items-center pl-2 pr-1 text-cyan-400">
+          <Terminal className="w-3.5 h-3.5" />
+        </div>
         {sections.map(({ id, label }) => (
           <NavItem
             key={id}
@@ -103,7 +104,7 @@ const FloatingNav = () => {
       </nav>
 
       {/* Mobile Navigation */}
-      <nav className="md:hidden backdrop-blur-sm bg-background/30 border border-border/50 rounded-full px-4 py-2 shadow-lg flex gap-2">
+      <nav className="md:hidden backdrop-blur-xl bg-[#090c15]/90 border border-cyan-500/30 rounded-full px-3 py-1.5 shadow-2xl flex items-center gap-1.5">
         {sections.slice(0, 3).map(({ id, label }) => (
           <NavItem
             key={id}
@@ -113,12 +114,17 @@ const FloatingNav = () => {
           />
         ))}
         <DropdownMenu>
-          <DropdownMenuTrigger className="px-4 py-2 rounded-full hover:bg-primary/10">
-            <Menu className="h-4 w-4" />
+          <DropdownMenuTrigger className="px-3 py-1.5 rounded-full text-xs font-mono text-cyan-300 hover:bg-white/[0.08] flex items-center gap-1">
+            <Menu className="h-3.5 w-3.5" />
+            <span>More</span>
           </DropdownMenuTrigger>
-          <DropdownMenuContent align="end">
+          <DropdownMenuContent align="end" className="bg-[#0b0e18] border-cyan-500/30 text-slate-200">
             {sections.slice(3).map(({ id, label }) => (
-              <DropdownMenuItem key={id} onClick={() => scrollToSection(id)}>
+              <DropdownMenuItem
+                key={id}
+                onClick={() => scrollToSection(id)}
+                className="font-mono text-xs cursor-pointer hover:text-cyan-300 focus:bg-cyan-500/15 focus:text-cyan-300"
+              >
                 {label}
               </DropdownMenuItem>
             ))}
